@@ -10,8 +10,8 @@
 <meta property="og:description" content="Fotos sin ubicación, mensajes temporales y clave de emergencia. Sin servidores centrales.">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/icon.png">
-<link rel="stylesheet" href="assets/style.css?v=20261102e">
-<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="assets/style.css?v=20261102f">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('kasya-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
 </head>
 <body>
 
@@ -28,6 +28,7 @@
     <a href="#glosario">Glosario</a>
     <a class="btn btn-small" href="#descargar">Descargar</a>
   </nav>
+  <button class="theme-btn" id="theme-btn" type="button" aria-label="Cambiar entre modo oscuro y claro" title="Modo oscuro / claro">☀</button>
 </header>
 
 <main id="top">
@@ -422,8 +423,8 @@
   <p class="fine">Basado en software libre (Jami, <a class="term" href="#g-gplv3">GPLv3</a>). © <span id="year"></span> KASYA.</p>
 </footer>
 
-<script src="config.js?v=20261102e"></script>
-<script src="assets/qrcode.min.js?v=20261102e" onerror="window.__noqr=true"></script>
-<script src="assets/site.js?v=20261102e"></script>
+<script src="config.js?v=20261102f"></script>
+<script src="assets/qrcode.min.js?v=20261102f" onerror="window.__noqr=true"></script>
+<script src="assets/site.js?v=20261102f"></script>
 </body>
 </html>

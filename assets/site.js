@@ -64,3 +64,22 @@
     io.observe(el);
   });
 })();
+
+// Modo oscuro / claro
+(function () {
+  var btn = document.getElementById("theme-btn");
+  if (!btn) return;
+  var root = document.documentElement;
+  var meta = document.querySelector('meta[name="theme-color"]');
+  function apply(t) {
+    root.setAttribute("data-theme", t);
+    btn.textContent = t === "light" ? "☾" : "☀";
+    btn.setAttribute("aria-pressed", t === "light" ? "true" : "false");
+    if (meta) meta.setAttribute("content", t === "light" ? "#f4f7fd" : "#0b1020");
+    try { localStorage.setItem("kasya-theme", t); } catch (e) {}
+  }
+  btn.textContent = root.getAttribute("data-theme") === "light" ? "☾" : "☀";
+  btn.addEventListener("click", function () {
+    apply(root.getAttribute("data-theme") === "light" ? "dark" : "light");
+  });
+})();
