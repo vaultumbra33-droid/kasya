@@ -124,6 +124,87 @@
     <p class="eyebrow">Tecnología</p>
     <h2>Cómo funciona por dentro</h2>
     <p class="lead narrow">KASYA se construye sobre Jami, una red de comunicación de código abierto. Así viaja un mensaje tuyo, sin pasar por el servidor de nadie.</p>
+
+    <h3 class="sub">1. Qué es P2P (de igual a igual)</h3>
+    <div class="twocol">
+      <div>
+        <p>En una app normal, todos los mensajes pasan por un <strong>servidor central</strong>: tú le hablas a la empresa y la empresa le habla a tu contacto. Si ese servidor cae, se vuelve lento o es intervenido, todos quedan afectados.</p>
+        <p>En una red <strong>P2P (peer-to-peer)</strong> no hay centro. Cada teléfono es a la vez cliente y servidor: se conecta directamente con los demás. No hay un único punto que apagar, vigilar o vender.</p>
+        <ul class="ticks">
+          <li>Sin servidor que guarde tus mensajes</li>
+          <li>Sin un punto único de falla</li>
+          <li>Sin empresa que pueda leerte o cerrarte la cuenta</li>
+        </ul>
+      </div>
+      <figure class="diagram">
+        <svg viewBox="0 0 680 290" role="img" aria-labelledby="t1 d1">
+          <title id="t1">Red con servidor central frente a red P2P</title>
+          <desc id="d1">A la izquierda, cuatro teléfonos conectados a un servidor central. A la derecha, cinco teléfonos conectados directamente entre sí.</desc>
+          <text class="d-a" x="170" y="26" text-anchor="middle">Con servidor central</text>
+          <text class="d-a" x="510" y="26" text-anchor="middle">P2P (KASYA)</text>
+          <line class="d-sep" x1="340" y1="14" x2="340" y2="280"/>
+          <g class="d-line">
+            <line x1="60" y1="75" x2="170" y2="150"/><line x1="280" y1="75" x2="170" y2="150"/>
+            <line x1="60" y1="235" x2="170" y2="150"/><line x1="280" y1="235" x2="170" y2="150"/>
+          </g>
+          <rect class="d-hot" x="130" y="125" width="80" height="50" rx="10"/>
+          <text class="d-t" x="170" y="155" text-anchor="middle">Servidor</text>
+          <g class="d-node-g">
+            <rect class="d-node" x="30" y="55" width="60" height="40" rx="8"/><rect class="d-node" x="250" y="55" width="60" height="40" rx="8"/>
+            <rect class="d-node" x="30" y="215" width="60" height="40" rx="8"/><rect class="d-node" x="250" y="215" width="60" height="40" rx="8"/>
+          </g>
+          <g class="d-line">
+            <line x1="510" y1="75" x2="430" y2="145"/><line x1="510" y1="75" x2="590" y2="145"/>
+            <line x1="430" y1="145" x2="590" y2="145"/><line x1="430" y1="145" x2="460" y2="235"/>
+            <line x1="590" y1="145" x2="560" y2="235"/><line x1="460" y1="235" x2="560" y2="235"/>
+            <line x1="510" y1="75" x2="460" y2="235"/><line x1="510" y1="75" x2="560" y2="235"/>
+          </g>
+          <g class="d-node-g">
+            <rect class="d-node d-ok" x="480" y="55" width="60" height="40" rx="8"/><rect class="d-node d-ok" x="400" y="125" width="60" height="40" rx="8"/>
+            <rect class="d-node d-ok" x="560" y="125" width="60" height="40" rx="8"/><rect class="d-node d-ok" x="430" y="215" width="60" height="40" rx="8"/>
+            <rect class="d-node d-ok" x="530" y="215" width="60" height="40" rx="8"/>
+          </g>
+        </svg>
+        <figcaption>Izquierda: todo pasa por un centro. Derecha: cada equipo se conecta directamente con los demás.</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="sub">2. Qué es una DHT</h3>
+    <div class="twocol">
+      <figure class="diagram">
+        <svg viewBox="0 0 340 300" role="img" aria-labelledby="t2 d2">
+          <title id="t2">Anillo de nodos de una tabla hash distribuida</title>
+          <desc id="d2">Ocho nodos en un anillo. Una clave en el centro apunta a los dos nodos más cercanos, que son los que guardan el dato.</desc>
+          <circle class="d-line" cx="170" cy="150" r="105" stroke-dasharray="4 6"/>
+          <line class="d-acc" x1="170" y1="150" x2="170" y2="45" stroke-dasharray="6 5"/>
+          <line class="d-acc" x1="170" y1="150" x2="244" y2="76" stroke-dasharray="6 5"/>
+          <g>
+            <circle class="d-node" cx="275" cy="150" r="17"/><circle class="d-node" cx="244" cy="224" r="17"/>
+            <circle class="d-node" cx="170" cy="255" r="17"/><circle class="d-node" cx="96" cy="224" r="17"/>
+            <circle class="d-node" cx="65" cy="150" r="17"/><circle class="d-node" cx="96" cy="76" r="17"/>
+            <circle class="d-hot" cx="170" cy="45" r="19"/><circle class="d-hot" cx="244" cy="76" r="19"/>
+          </g>
+          <polygon class="d-key" points="170,134 186,150 170,166 154,150"/>
+          <text class="d-m" x="170" y="190" text-anchor="middle">clave = hash(ID)</text>
+          <text class="d-s" x="170" y="49" text-anchor="middle">B</text>
+          <text class="d-s" x="244" y="80" text-anchor="middle">C</text>
+          <text class="d-m" x="275" y="154" text-anchor="middle">A</text><text class="d-m" x="244" y="228" text-anchor="middle">D</text>
+          <text class="d-m" x="170" y="259" text-anchor="middle">E</text><text class="d-m" x="96" y="228" text-anchor="middle">F</text>
+          <text class="d-m" x="65" y="154" text-anchor="middle">G</text><text class="d-m" x="96" y="80" text-anchor="middle">H</text>
+        </svg>
+        <figcaption>Los nodos B y C, los más cercanos a la clave, guardan el dato. Cualquiera puede preguntar y llegar a ellos.</figcaption>
+      </figure>
+      <div>
+        <p>Una <strong>DHT (Distributed Hash Table, tabla hash distribuida)</strong> es como una agenda gigante repartida entre miles de teléfonos, donde ninguno la tiene completa.</p>
+        <ul class="ticks">
+          <li>Cada dato tiene una <strong>clave</strong>, que sale de aplicar un hash (una huella) a tu identificador.</li>
+          <li>El dato se guarda en los nodos cuyo identificador queda <strong>más cerca</strong> de esa clave, y se replica en varios por si alguno se va.</li>
+          <li>Para encontrar algo, cada nodo te acerca al siguiente más cercano: llegas en pocos saltos, aunque la red sea enorme.</li>
+          <li>Nadie manda: si un nodo desaparece, la red se reacomoda sola.</li>
+        </ul>
+        <p>Jami usa <strong>OpenDHT</strong>, una DHT de diseño similar a Kademlia. En ella tu teléfono publica, de forma firmada, cómo localizarlo, y tu contacto la consulta para encontrarte.</p>
+      </div>
+    </div>
     <ol class="journey tech">
       <li><span class="stage">Paso 1</span><h3>Tu identidad nace en tu teléfono</h3>
         <p>Al crear tu cuenta se generan tus llaves criptográficas en tu dispositivo. No hay registro con teléfono ni correo: tu identidad es tu llave.</p></li>
@@ -138,9 +219,80 @@
       <li><span class="stage">Paso 6</span><h3>Capas de KASYA</h3>
         <p>Encima de ese motor agregamos tu PIN, la clave de emergencia, mensajes temporales, fotos sin ubicación, canales y una interfaz oscura y sobria.</p></li>
     </ol>
+    <h3 class="sub">3. Cómo se conectan dos teléfonos</h3>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 320" role="img" aria-labelledby="t3 d3">
+        <title id="t3">Secuencia de conexión entre dos teléfonos</title>
+        <desc id="d3">Ana publica su ubicación en la red DHT, Beto la busca, intercambian candidatos de red y abren una conexión directa cifrada.</desc>
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="d-arrow" d="M0 0L10 5L0 10z"/></marker>
+          <marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="d-arrow-m" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <line class="d-life" x1="90" y1="46" x2="90" y2="312"/><line class="d-life" x1="320" y1="46" x2="320" y2="312"/><line class="d-life" x1="550" y1="46" x2="550" y2="312"/>
+        <rect class="d-node" x="40" y="8" width="100" height="36" rx="8"/><text class="d-t" x="90" y="32" text-anchor="middle">Ana</text>
+        <rect class="d-hot" x="260" y="8" width="120" height="36" rx="8"/><text class="d-t" x="320" y="32" text-anchor="middle">Red DHT</text>
+        <rect class="d-node" x="500" y="8" width="100" height="36" rx="8"/><text class="d-t" x="550" y="32" text-anchor="middle">Beto</text>
+        <line class="d-seq" x1="92" y1="100" x2="316" y2="100" marker-end="url(#arb)"/>
+        <text class="d-s" x="205" y="92" text-anchor="middle">1 Publica cómo hallarla</text>
+        <line class="d-seq" x1="548" y1="140" x2="324" y2="140" marker-end="url(#arb)"/>
+        <text class="d-s" x="435" y="132" text-anchor="middle">2 Beto busca a Ana</text>
+        <line class="d-seq" x1="324" y1="180" x2="548" y2="180" stroke-dasharray="6 5" marker-end="url(#arb)"/>
+        <text class="d-s" x="435" y="172" text-anchor="middle">3 La red responde</text>
+        <line class="d-seq" x1="98" y1="226" x2="542" y2="226" stroke-dasharray="6 5" marker-start="url(#arb)" marker-end="url(#arb)"/>
+        <text class="d-s" x="320" y="218" text-anchor="middle">4 Intercambian candidatos de red (cifrados)</text>
+        <line class="d-acc" x1="98" y1="284" x2="542" y2="284" marker-start="url(#ar)" marker-end="url(#ar)"/>
+        <text class="d-a" x="320" y="274" text-anchor="middle">5 Conexión directa y cifrada (TLS)</text>
+      </svg>
+      <figcaption>La red DHT solo sirve para encontrarse. Una vez conectados, los mensajes van de teléfono a teléfono, sin pasar por ella.</figcaption>
+    </figure>
+
+    <h3 class="sub">4. Las capas de KASYA</h3>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 290" role="img" aria-labelledby="t4 d4">
+        <title id="t4">Capas de la aplicación</title>
+        <desc id="d4">De arriba abajo: interfaz KASYA, cliente, motor, red P2P e internet.</desc>
+        <rect class="d-hot" x="10" y="8" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="38">Interfaz KASYA</text><text class="d-m" x="230" y="38">PIN · clave de emergencia · canales · tema oscuro</text>
+        <rect class="d-node" x="10" y="64" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="94">Cliente (Kotlin)</text><text class="d-m" x="230" y="94">cuentas · conversaciones · llamadas · contactos</text>
+        <rect class="d-node" x="10" y="120" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="150">Motor (C++)</text><text class="d-m" x="230" y="150">cifrado · swarm (Git) · audio y video</text>
+        <rect class="d-node" x="10" y="176" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="206">Red P2P</text><text class="d-m" x="230" y="206">OpenDHT · ICE / STUN / TURN · TLS · SRTP</text>
+        <rect class="d-node d-dim" x="10" y="232" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="262">Internet</text><text class="d-m" x="230" y="262">Wi-Fi o datos móviles; sin servidor intermedio</text>
+      </svg>
+      <figcaption>Todo lo que ves es la capa de arriba. El trabajo duro lo hace el motor, que habla directamente con otros teléfonos.</figcaption>
+    </figure>
+
+    <h3 class="sub">Servidor central o P2P: la comparación</h3>
+    <div class="compare">
+      <table>
+        <thead><tr><th></th><th>App con servidor central</th><th class="us">KASYA (P2P)</th></tr></thead>
+        <tbody>
+          <tr><th>Dónde viven tus mensajes</th><td>En los servidores de la empresa</td><td class="us">En tu teléfono y el de tu contacto</td></tr>
+          <tr><th>Tu identidad</th><td>Número de teléfono o correo</td><td class="us">Una llave generada en tu equipo</td></tr>
+          <tr><th>Cómo te encuentran</th><td>Consultando su base de datos</td><td class="us">Consultando la red DHT</td></tr>
+          <tr><th>Si el servidor cae</th><td>Nadie se comunica</td><td class="us">No hay servidor que caiga</td></tr>
+          <tr><th>Quién puede ver tus metadatos</th><td>La empresa y quien la presione</td><td class="us">No hay un lugar central que los junte</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="chips">
       <span>OpenDHT</span><span>TLS 1.3</span><span>SRTP</span><span>ICE / STUN / TURN</span><span>Git (swarm)</span><span>Kotlin · C++</span><span>GPLv3</span>
     </div>
+    <h3 class="sub">Glosario rápido</h3>
+    <dl class="gloss">
+      <div><dt>P2P</dt><dd>Peer-to-peer: los equipos se comunican directamente, sin servidor intermedio.</dd></div>
+      <div><dt>DHT</dt><dd>Tabla hash distribuida: un directorio repartido entre todos los nodos de la red.</dd></div>
+      <div><dt>Hash</dt><dd>Huella de longitud fija que se calcula a partir de un dato; sirve como clave.</dd></div>
+      <div><dt>ICE</dt><dd>Método estándar para que dos equipos detrás de routers encuentren cómo conectarse.</dd></div>
+      <div><dt>STUN / TURN</dt><dd>Ayudas de ICE: STUN descubre tu dirección pública; TURN retransmite solo si la conexión directa es imposible.</dd></div>
+      <div><dt>TLS</dt><dd>Protocolo de cifrado de la conexión, el mismo que protege la banca en línea.</dd></div>
+      <div><dt>SRTP</dt><dd>Versión cifrada del protocolo de audio y video en tiempo real, usada en las llamadas.</dd></div>
+      <div><dt>Swarm</dt><dd>Historial de una conversación que se replica entre sus participantes, basado en Git.</dd></div>
+    </dl>
     <p class="fine">Nombres técnicos del motor Jami sobre el que se basa KASYA. Los detalles de implementación pueden evolucionar entre versiones.</p>
   </section>
 
