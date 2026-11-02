@@ -218,7 +218,11 @@ svg circle.d-hot, .d-key { animation: pulse 2.2s ease-in-out infinite; transform
 .js .diagram.in .seq { animation: fadeUp .6s ease both; animation-delay: calc(var(--i) * .45s); }
 .js .diagram.in .lay { animation: slideIn .6s ease both; animation-delay: calc(var(--i) * .25s); }
 
+.d-trail { stroke: var(--accent-2); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: .8; }
+.d-pkt { fill: var(--accent-2); stroke: var(--bg); stroke-width: 2; }
+.d-ring { stroke: var(--accent-2); stroke-width: 2.5; }
 @media (prefers-reduced-motion: reduce) {
+  .dht-anim { display: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal, .js .diagram .seq, .js .diagram .lay { opacity: 1 !important; transform: none !important; }
 }
