@@ -267,3 +267,9 @@ svg circle.d-hot, .d-key { animation: pulse 2.2s ease-in-out infinite; transform
   .manual details { border: 1px solid #ccc; }
   .manual details > * { display: block; }
 }
+
+/* Capturas de la app */
+.shots { display: flex; gap: 20px; overflow-x: auto; padding: 8px 4px 20px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+.shot { flex: 0 0 auto; width: min(240px, 62vw); margin: 0; scroll-snap-align: center; }
+.shot img { display: block; width: 100%; height: auto; border-radius: 26px; border: 6px solid #05070f; box-shadow: 0 10px 30px rgba(0,0,0,.35); background: #05070f; }
+.shot figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: .9rem; }

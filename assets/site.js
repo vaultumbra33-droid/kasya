@@ -83,3 +83,17 @@
     apply(root.getAttribute("data-theme") === "light" ? "dark" : "light");
   });
 })();
+
+// Capturas de la app (se muestran solo si hay en config.js)
+(function () {
+  var list = (window.KASYA && window.KASYA.shots) || [];
+  var box = document.getElementById("shots"), sec = document.getElementById("capturas");
+  if (!box || !sec || !list.length) return;
+  list.forEach(function (s) {
+    var f = document.createElement("figure"); f.className = "shot";
+    var i = document.createElement("img"); i.src = s.src; i.alt = s.alt || s.caption || "Captura de KASYA"; i.loading = "lazy";
+    var c = document.createElement("figcaption"); c.textContent = s.caption || "";
+    f.appendChild(i); f.appendChild(c); box.appendChild(f);
+  });
+  sec.hidden = false;
+})();
