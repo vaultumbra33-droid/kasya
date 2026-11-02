@@ -44,3 +44,23 @@
   var vt = document.getElementById("qr-vt");
   if (vt) drawQr(vt, vt.getAttribute("data-url"));
 })();
+
+// Aparicion al hacer scroll
+(function () {
+  var targets = document.querySelectorAll(
+    "main section:not(.hero) h2, main section:not(.hero) .eyebrow, main section:not(.hero) .lead, .card, .journey li, .steps li, .gloss > div, .diagram, .vt, .compare, .chips, .ticks li, h3.sub"
+  );
+  if (!("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+  targets.forEach(function (el) {
+    if (el.closest(".hero")) return;
+    var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+    el.style.setProperty("--d", Math.min(sibs, 5) * 70 + "ms");
+    el.classList.add("reveal");
+    io.observe(el);
+  });
+})();

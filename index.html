@@ -10,7 +10,8 @@
 <meta property="og:description" content="Fotos sin ubicación, mensajes temporales y clave de emergencia. Sin servidores centrales.">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/icon.png">
-<link rel="stylesheet" href="assets/style.css?v=20261102d">
+<link rel="stylesheet" href="assets/style.css?v=20261102e">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
@@ -217,7 +218,7 @@
             <rect class="d-node" x="30" y="55" width="60" height="40" rx="8"/><rect class="d-node" x="250" y="55" width="60" height="40" rx="8"/>
             <rect class="d-node" x="30" y="215" width="60" height="40" rx="8"/><rect class="d-node" x="250" y="215" width="60" height="40" rx="8"/>
           </g>
-          <g class="d-line">
+          <g class="d-line d-flow">
             <line x1="510" y1="75" x2="430" y2="145"/><line x1="510" y1="75" x2="590" y2="145"/>
             <line x1="430" y1="145" x2="590" y2="145"/><line x1="430" y1="145" x2="460" y2="235"/>
             <line x1="590" y1="145" x2="560" y2="235"/><line x1="460" y1="235" x2="560" y2="235"/>
@@ -296,16 +297,16 @@
         <rect class="d-node" x="40" y="8" width="100" height="36" rx="8"/><text class="d-t" x="90" y="32" text-anchor="middle">Ana</text>
         <rect class="d-hot" x="260" y="8" width="120" height="36" rx="8"/><text class="d-t" x="320" y="32" text-anchor="middle">Red DHT</text>
         <rect class="d-node" x="500" y="8" width="100" height="36" rx="8"/><text class="d-t" x="550" y="32" text-anchor="middle">Beto</text>
-        <line class="d-seq" x1="92" y1="100" x2="316" y2="100" marker-end="url(#arb)"/>
-        <text class="d-s" x="205" y="92" text-anchor="middle">1 Publica cómo hallarla</text>
-        <line class="d-seq" x1="548" y1="140" x2="324" y2="140" marker-end="url(#arb)"/>
-        <text class="d-s" x="435" y="132" text-anchor="middle">2 Beto busca a Ana</text>
-        <line class="d-seq" x1="324" y1="180" x2="548" y2="180" stroke-dasharray="6 5" marker-end="url(#arb)"/>
-        <text class="d-s" x="435" y="172" text-anchor="middle">3 La red responde</text>
-        <line class="d-seq" x1="98" y1="226" x2="542" y2="226" stroke-dasharray="6 5" marker-start="url(#arb)" marker-end="url(#arb)"/>
-        <text class="d-s" x="320" y="218" text-anchor="middle">4 Intercambian candidatos de red (cifrados)</text>
-        <line class="d-acc" x1="98" y1="284" x2="542" y2="284" marker-start="url(#ar)" marker-end="url(#ar)"/>
-        <text class="d-a" x="320" y="274" text-anchor="middle">5 Conexión directa y cifrada (TLS)</text>
+        <g class="seq" style="--i:0"><line class="d-seq" x1="92" y1="100" x2="316" y2="100" marker-end="url(#arb)"/>
+        <text class="d-s" x="205" y="92" text-anchor="middle">1 Publica cómo hallarla</text></g>
+        <g class="seq" style="--i:1"><line class="d-seq" x1="548" y1="140" x2="324" y2="140" marker-end="url(#arb)"/>
+        <text class="d-s" x="435" y="132" text-anchor="middle">2 Beto busca a Ana</text></g>
+        <g class="seq" style="--i:2"><line class="d-seq" x1="324" y1="180" x2="548" y2="180" stroke-dasharray="6 5" marker-end="url(#arb)"/>
+        <text class="d-s" x="435" y="172" text-anchor="middle">3 La red responde</text></g>
+        <g class="seq" style="--i:3"><line class="d-seq" x1="98" y1="226" x2="542" y2="226" stroke-dasharray="6 5" marker-start="url(#arb)" marker-end="url(#arb)"/>
+        <text class="d-s" x="320" y="218" text-anchor="middle">4 Intercambian candidatos de red (cifrados)</text></g>
+        <g class="seq" style="--i:4"><line class="d-acc" x1="98" y1="284" x2="542" y2="284" marker-start="url(#ar)" marker-end="url(#ar)"/>
+        <text class="d-a" x="320" y="274" text-anchor="middle">5 Conexión directa y cifrada (TLS)</text></g>
       </svg>
       <figcaption>La red DHT solo sirve para encontrarse. Una vez conectados, los mensajes van de teléfono a teléfono, sin pasar por ella.</figcaption>
     </figure>
@@ -315,16 +316,16 @@
       <svg viewBox="0 0 640 290" role="img" aria-labelledby="t4 d4">
         <title id="t4">Capas de la aplicación</title>
         <desc id="d4">De arriba abajo: interfaz KASYA, cliente, motor, red P2P e internet.</desc>
-        <rect class="d-hot" x="10" y="8" width="620" height="48" rx="10"/>
-        <text class="d-t" x="26" y="38">Interfaz KASYA</text><text class="d-m" x="230" y="38">PIN · clave de emergencia · canales · tema oscuro</text>
-        <rect class="d-node" x="10" y="64" width="620" height="48" rx="10"/>
-        <text class="d-t" x="26" y="94">Cliente (Kotlin)</text><text class="d-m" x="230" y="94">cuentas · conversaciones · llamadas · contactos</text>
-        <rect class="d-node" x="10" y="120" width="620" height="48" rx="10"/>
-        <text class="d-t" x="26" y="150">Motor (C++)</text><text class="d-m" x="230" y="150">cifrado · swarm (Git) · audio y video</text>
-        <rect class="d-node" x="10" y="176" width="620" height="48" rx="10"/>
-        <text class="d-t" x="26" y="206">Red P2P</text><text class="d-m" x="230" y="206">OpenDHT · ICE / STUN / TURN · TLS · SRTP</text>
-        <rect class="d-node d-dim" x="10" y="232" width="620" height="48" rx="10"/>
-        <text class="d-t" x="26" y="262">Internet</text><text class="d-m" x="230" y="262">Wi-Fi o datos móviles; sin servidor intermedio</text>
+        <g class="lay" style="--i:0"><rect class="d-hot" x="10" y="8" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="38">Interfaz KASYA</text><text class="d-m" x="230" y="38">PIN · clave de emergencia · canales · tema oscuro</text></g>
+        <g class="lay" style="--i:1"><rect class="d-node" x="10" y="64" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="94">Cliente (Kotlin)</text><text class="d-m" x="230" y="94">cuentas · conversaciones · llamadas · contactos</text></g>
+        <g class="lay" style="--i:2"><rect class="d-node" x="10" y="120" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="150">Motor (C++)</text><text class="d-m" x="230" y="150">cifrado · swarm (Git) · audio y video</text></g>
+        <g class="lay" style="--i:3"><rect class="d-node" x="10" y="176" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="206">Red P2P</text><text class="d-m" x="230" y="206">OpenDHT · ICE / STUN / TURN · TLS · SRTP</text></g>
+        <g class="lay" style="--i:4"><rect class="d-node d-dim" x="10" y="232" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="262">Internet</text><text class="d-m" x="230" y="262">Wi-Fi o datos móviles; sin servidor intermedio</text></g>
       </svg>
       <figcaption>Todo lo que ves es la capa de arriba. El trabajo duro lo hace el motor, que habla directamente con otros teléfonos.</figcaption>
     </figure>
@@ -421,8 +422,8 @@
   <p class="fine">Basado en software libre (Jami, <a class="term" href="#g-gplv3">GPLv3</a>). © <span id="year"></span> KASYA.</p>
 </footer>
 
-<script src="config.js?v=20261102d"></script>
-<script src="assets/qrcode.min.js?v=20261102d" onerror="window.__noqr=true"></script>
-<script src="assets/site.js?v=20261102d"></script>
+<script src="config.js?v=20261102e"></script>
+<script src="assets/qrcode.min.js?v=20261102e" onerror="window.__noqr=true"></script>
+<script src="assets/site.js?v=20261102e"></script>
 </body>
 </html>
