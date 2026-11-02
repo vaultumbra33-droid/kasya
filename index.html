@@ -10,7 +10,7 @@
 <meta property="og:description" content="Fotos sin ubicación, mensajes temporales y clave de emergencia. Sin servidores centrales.">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/icon.png">
-<link rel="stylesheet" href="assets/style.css?v=20261102j">
+<link rel="stylesheet" href="assets/style.css?v=20261102l">
 <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('kasya-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
 </head>
 <body>
@@ -108,7 +108,13 @@
       <p class="eyebrow">La app por dentro</p>
       <h2>Así se ve KASYA</h2>
       <p class="lead narrow">Capturas reales de la app, tomadas en un emulador Android. Los chats son de ejemplo, entre cuentas de prueba con nombres ficticios.</p>
-      <div class="shots" id="shots"></div>
+      <div class="carousel">
+        <button class="shots-nav" id="shots-prev" type="button" aria-label="Captura anterior">&#8249;</button>
+        <div class="shots" id="shots" role="region" aria-label="Capturas de la app"></div>
+        <button class="shots-nav" id="shots-next" type="button" aria-label="Captura siguiente">&#8250;</button>
+      </div>
+      <p class="shots-cap" id="shots-cap" aria-live="polite"></p>
+      <div class="shots-dots" id="shots-dots"></div>
     </div>
   </section>
 
@@ -448,9 +454,9 @@
   <p class="fine">Basado en software libre (Jami, <a class="term" href="#g-gplv3">GPLv3</a>). © <span id="year"></span> KASYA.</p>
 </footer>
 
-<script src="config.js?v=20261102j"></script>
-<script src="assets/qrcode.min.js?v=20261102j" onerror="window.__noqr=true"></script>
-<script src="assets/site.js?v=20261102j"></script>
-<script src="assets/bg3d.js?v=20261102j" defer></script>
+<script src="config.js?v=20261102l"></script>
+<script src="assets/qrcode.min.js?v=20261102l" onerror="window.__noqr=true"></script>
+<script src="assets/site.js?v=20261102l"></script>
+<script src="assets/bg3d.js?v=20261102l" defer></script>
 </body>
 </html>

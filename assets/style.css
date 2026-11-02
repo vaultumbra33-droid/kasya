@@ -273,10 +273,23 @@ svg circle.d-hot, .d-key { animation: pulse 2.2s ease-in-out infinite; transform
 }
 
 /* Capturas de la app */
-.shots { display: flex; gap: 20px; overflow-x: auto; padding: 8px 4px 20px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
-.shot { flex: 0 0 auto; width: min(240px, 62vw); margin: 0; scroll-snap-align: center; }
-.shot img { display: block; width: 100%; height: auto; border-radius: 26px; border: 6px solid #05070f; box-shadow: 0 10px 30px rgba(0,0,0,.35); background: #05070f; }
-.shot figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: .9rem; }
+.carousel { position: relative; margin-top: 8px; }
+.shots { display: flex; gap: 22px; overflow-x: auto; padding: 24px calc(50% - 130px) 18px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; outline: none; mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
+.shots::-webkit-scrollbar { display: none; }
+.shot { flex: 0 0 auto; width: 260px; margin: 0; scroll-snap-align: center; cursor: pointer; opacity: .45; transform: scale(.86); transition: transform .35s ease, opacity .35s ease; }
+.shot.on { opacity: 1; transform: scale(1); cursor: default; }
+.shot img { display: block; width: 100%; height: auto; border-radius: 30px; border: 7px solid #05070f; box-shadow: 0 18px 44px rgba(0,0,0,.45), 0 0 0 1px var(--line); background: #05070f; user-select: none; }
+.shot.on img { box-shadow: 0 22px 54px rgba(0,0,0,.5), 0 0 40px color-mix(in srgb, var(--accent-2) 28%, transparent), 0 0 0 1px var(--line); }
+.shots-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); background: color-mix(in srgb, var(--card) 88%, transparent); color: var(--text); font-size: 1.9rem; line-height: 1; cursor: pointer; backdrop-filter: blur(6px); display: grid; place-items: center; padding: 0 0 4px; transition: background .2s, transform .2s; }
+.shots-nav:hover { background: var(--card); transform: translateY(-50%) scale(1.08); }
+#shots-prev { left: max(4px, calc(50% - 470px)); }
+#shots-next { right: max(4px, calc(50% - 470px)); }
+.shots-cap { text-align: center; color: var(--muted); min-height: 3em; margin: 6px auto 10px; max-width: 520px; }
+.shots-dots { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.shots-dot { width: 9px; height: 9px; padding: 0; border-radius: 99px; border: 0; background: var(--line); cursor: pointer; transition: width .25s, background .25s; }
+.shots-dot.on { width: 26px; background: var(--accent-2); }
+@media (max-width: 640px) { .shots-nav { display: none; } .shot { width: 62vw; max-width: 240px; } .shots { padding-inline: calc(50% - min(31vw, 120px)); } }
+@media (prefers-reduced-motion: reduce) { .shot { transition: none; } }
 
 /* Fondo 3D */
 #bg3d { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 1; }
