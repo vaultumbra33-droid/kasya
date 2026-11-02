@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KASYA — Live safe. Live decentralized.</title>
+<meta name="description" content="KASYA is private messaging with no central servers: photos without location, disappearing messages and an emergency key that erases everything. Download the APK.">
+<meta name="theme-color" content="#0b1020">
+<meta property="og:title" content="KASYA — Live safe. Live decentralized.">
+<meta property="og:description" content="Photos without location, disappearing messages and an emergency key. No central servers.">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="es" href="../index.html">
+<link rel="icon" href="../assets/icon.png">
+<link rel="stylesheet" href="../assets/style.css?v=20261102m">
+<script>document.documentElement.classList.add('js');try{localStorage.setItem('kasya-lang','en');var t=localStorage.getItem('kasya-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top"><img src="../assets/icon.png" alt="" width="32" height="32"><span>KASYA</span></a>
+  <nav id="menu">
+    <a href="#protege">What protects you</a>
+    <a href="#verifica">Verify</a>
+    <a href="#instalar">Install</a>
+    <a href="manual.html">Manual</a>
+    <a href="#empresas">Business</a>
+    <a href="#tecnologia">How it works</a>
+    <a href="#nosotros">About us</a>
+    <a href="#glosario">Glossary</a>
+    <a class="btn btn-small" href="#descargar">Download</a>
+  </nav>
+  <div class="nav-tools">
+    <a class="lang-btn" href="../index.html" hreflang="es" lang="es" title="Español" aria-label="Ver en español">ES</a>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="Switch between dark and light mode" title="Dark / light mode">☀</button>
+    <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Private messaging · Version <span data-version>1.0</span></p>
+      <h1>Live safe.<br>Live decentralized.</h1>
+      <p class="lead">Today your conversations live on another company's server. With KASYA they live on your phone, encrypted,
+        and only you decide what leaves it.</p>
+      <div class="cta">
+        <a class="btn" id="download-btn" href="#descargar">Download KASYA</a>
+        <a class="btn btn-ghost" href="#protege">See how it protects you</a>
+      </div>
+      <p class="fine">Android 8.0 or later · arm64 · <span data-size>~ MB</span></p>
+    </div>
+    <div class="hero-card" id="descargar">
+      <h2>Start in a minute</h2>
+      <p>Scan with your phone or tap the button.</p>
+      <div class="qr-wrap"><canvas id="qr" width="220" height="220" aria-label="Download QR code"></canvas><p id="qr-fallback" class="fine" hidden>QR not available: use the button.</p></div>
+      <a class="btn btn-block" id="download-btn-2" href="#">Download KASYA <span data-version>1.0</span></a>
+      <p class="fine mono" id="sha"><a class="term" href="#g-sha">SHA-256</a>: <span data-sha>pending</span></p>
+      <p class="fine"><a href="https://www.virustotal.com/gui/file/87adae7544fa2b68c842c85ddf21469ecbb16cf142b6f059fce0ee2dab5877d4" target="_blank" rel="noopener">✓ Version 1.0: 0 of 66 antivirus engines flag it on VirusTotal</a></p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow">The problem</p>
+      <h2>What ordinary apps know about you</h2>
+      <div class="grid three">
+        <article class="card"><h3>Where you have been</h3><p>Every photo with GPS carries the exact coordinates of where you took it, hidden inside: your home, your work, your children's school. Just sending it is enough.</p></article>
+        <article class="card"><h3>What you took it with</h3><p>Photos also store the date and time, your phone's make and model and, sometimes, the author's name.</p></article>
+        <article class="card"><h3>What you said</h3><p>Your messages pass through and stay on servers you do not control, and can live there long after you delete them.</p></article>
+        <article class="card"><h3>Who you talk to</h3><p>Even if the content is encrypted, who writes to you, when and for how long usually gets logged. That <a class="term" href="#g-metadatos">metadata</a> tells your life story.</p></article>
+        <article class="card"><h3>Who you are</h3><p>An account tied to your phone number: your identity, handed over in advance, and often your contact list too.</p></article>
+        <article class="card"><h3>Where you connect from</h3><p>Your IP address reveals your city and your internet provider every time you connect to someone else's server.</p></article>
+        <article class="card"><h3>What you like and what you fear</h3><p>Profiles for advertising and analysis are built from your conversations and habits. Your daily life becomes a product.</p></article>
+        <article class="card"><h3>Copies nobody told you about</h3><p>Cloud backups, files that save themselves and photos that stay in the gallery with their location, even after you have sent them.</p></article>
+        <article class="card"><h3>What happens if you are forced</h3><p>If someone forces you to unlock your phone, your whole history is exposed. Almost no app has a plan for that moment.</p></article>
+      </div>
+      <p class="lead narrow topgap">You do not need to be a journalist or have something to hide. You just have to want what is yours to stay yours. KASYA was born to close exactly these doors.</p>
+    </div>
+  </section>
+
+  <section id="protege" class="wrap section">
+    <p class="eyebrow">What protects you</p>
+    <h2>Built for when something goes wrong</h2>
+    <div class="grid two">
+      <article class="card big">
+        <span class="badge">Photos</span>
+        <h3>Your photos travel without location</h3>
+        <p>When you send a photo, KASYA removes the GPS position and the device and author data from the copy. The recipient sees the image, not where you took it. Your originals are not touched.</p>
+      </article>
+      <article class="card big">
+        <span class="badge">Messages</span>
+        <h3>Disappearing messages</h3>
+        <p>Choose how long a conversation should last and KASYA deletes the messages when the time is up. The timer is agreed on both sides of the chat.</p>
+      </article>
+      <article class="card big accent">
+        <span class="badge">Emergency</span>
+        <h3>Emergency key</h3>
+        <p>You set a second PIN. If someone forces you to open the app and you type that PIN, KASYA erases everything: accounts, messages, photos, documents and settings, and opens again as new. To anyone watching, it just restarted.</p>
+      </article>
+      <article class="card big">
+        <span class="badge">Access</span>
+        <h3>Your app opens with your PIN</h3>
+        <p>With a PIN, nobody gets in. Your phone being unlocked no longer means your chats are exposed.</p>
+      </article>
+    </div>
+    <p class="fine">Files you export yourself outside the app are not deleted by the <a class="term" href="#g-clave-emergencia">emergency key</a>. <a class="term" href="#g-mensajes-temporales">Disappearing messages</a> depend on both people using KASYA.</p>
+  </section>
+
+  <section id="capturas" class="band" hidden>
+    <div class="wrap">
+      <p class="eyebrow">Inside the app</p>
+      <h2>This is what KASYA looks like</h2>
+      <p class="lead narrow">Real screenshots of the app, taken on an Android emulator. The chats are examples between test accounts with fictional names.</p>
+      <div class="carousel">
+        <button class="shots-nav" id="shots-prev" type="button" aria-label="Previous screenshot">&#8249;</button>
+        <div class="shots" id="shots" role="region" aria-label="App screenshots"></div>
+        <button class="shots-nav" id="shots-next" type="button" aria-label="Next screenshot">&#8250;</button>
+      </div>
+      <p class="shots-cap" id="shots-cap" aria-live="polite"></p>
+      <div class="shots-dots" id="shots-dots"></div>
+    </div>
+  </section>
+
+  <section id="descentralizado" class="band">
+    <div class="wrap enterprise">
+      <div>
+        <p class="eyebrow">Truly decentralized</p>
+        <h2>With no central server, there is nobody to ask for your data</h2>
+        <p class="lead">KASYA connects phone to phone. Your identity is generated on your device, is not registered with your number and does not depend on a company continuing to exist, or continuing to be kind.</p>
+        <ul class="ticks">
+          <li><a class="term" href="#g-cifrado-e2e">End-to-end encryption</a> in chats, calls and video calls</li>
+          <li>Account with no phone number or email</li>
+          <li>Group calls and <a class="term" href="#g-canal">channels</a> to publish to those who follow you, stores, and news from each outlet's own feeds</li>
+          <li>Dark, understated theme, made to go unnoticed</li>
+        </ul>
+      </div>
+      <div class="card ent-card">
+        <h3>Your key is yours</h3>
+        <p>It lives on your device. Nobody keeps it for you, and that is why nobody can hand it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="verifica" class="wrap section">
+    <p class="eyebrow">Trust</p>
+    <h2>Do not take our word: check it</h2>
+    <p class="lead narrow">A good guide does not ask for blind faith: they give you the tools to check the road yourself.
+      That is why we invite you to inspect the <a class="term" href="#g-apk">APK</a> before installing it.</p>
+    <div class="grid three">
+      <article class="card"><span class="num">01</span><h3>No malware or spyware</h3><p>KASYA does not spy, does not send your data to anyone and does not install anything hidden. That is why we are not afraid of you checking it.</p></article>
+      <article class="card"><span class="num">02</span><h3>No ads or analytics</h3><p>The version you download includes no advertising or third-party tracking services.</p></article>
+      <article class="card"><span class="num">03</span><h3>Based on free software</h3><p>It comes from Jami, an open-source project that the community has audited for years.</p></article>
+    </div>
+    <ol class="steps">
+      <li><strong>Compare the fingerprint:</strong> the SHA-256 published above must match that of your downloaded file.</li>
+      <li><strong>Run it through <a class="term" href="#g-virustotal">VirusTotal</a>:</strong> upload the APK at <a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener">virustotal.com</a> and watch dozens of antivirus engines analyze it at once.</li>
+      <li><strong>Check the permissions:</strong> in Android Settings → Apps → KASYA you will see exactly what it can access, and it only asks for what messages and calls need.</li>
+    </ol>
+    <div class="vt">
+      <canvas id="qr-vt" class="vt-qr" width="180" height="180" data-url="https://www.virustotal.com/gui/file/87adae7544fa2b68c842c85ddf21469ecbb16cf142b6f059fce0ee2dab5877d4" aria-label="VirusTotal report QR code"></canvas>
+      <p class="vt-score"><strong>0 of 66</strong> antivirus engines flag version 1.0 on VirusTotal</p>
+      <p class="lead narrow">We show the result and we do not hide: we invite you to repeat the analysis yourself. Download the APK, upload it and see with your own eyes that it is clean.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener">Analyze it yourself on VirusTotal</a>
+        <a class="btn btn-ghost" href="https://www.virustotal.com/gui/file/87adae7544fa2b68c842c85ddf21469ecbb16cf142b6f059fce0ee2dab5877d4" target="_blank" rel="noopener">See our report</a>
+      </div>
+    </div>
+    <p class="fine">Analysis result from November 2, 2026 on version 1.0; the analysis of 1.1.0 is in progress (compare its SHA-256 above). If any analysis shows you something you do not understand, write to us and we will clear it up.</p>
+  </section>
+
+  <section id="instalar" class="band"><div class="wrap">
+    <p class="eyebrow">Get started</p>
+    <h2>Four steps and you are done</h2>
+    <ol class="steps">
+      <li><strong>Download</strong> the file <code>kasya-<span data-version>1.0</span>.apk</code> with the button or the QR.</li>
+      <li><strong>Open it</strong>. Android will ask you to allow installing apps from this source: accept only for this file.</li>
+      <li><strong>Create your account</strong> and, if you want, set your PIN. We also recommend setting the emergency key.</li>
+      <li><strong>Invite</strong> whoever you want with your QR code inside the app.</li>
+    </ol>
+    <p class="fine">Questions about using the app? Read the <a href="manual.html">user manual</a>.</p>
+    <p class="fine">Your device may show a warning because KASYA is not yet distributed through the Play Store. To verify the file, compare its SHA-256 fingerprint with the one published above. Always download from this page.</p>
+    <div class="cta"><a class="btn" href="#descargar">Download KASYA</a></div>
+  </div></section>
+
+  <section id="empresas" class="wrap section">
+    <div class="enterprise">
+      <div>
+        <p class="eyebrow">For teams</p>
+        <h2>KASYA Business</h2>
+        <p class="lead narrow">The same discretion for your organization: internal messaging that does not depend on third parties
+          and that you control.</p>
+        <ul class="ticks">
+          <li>User onboarding and removal managed by the company</li>
+          <li>Channels by area, with publishing permissions</li>
+          <li>Team calls and video calls</li>
+          <li>Installation on your own infrastructure</li>
+          <li>Support and guidance during rollout</li>
+        </ul>
+        <a class="btn" href="mailto:vaultumbra33@gmail.com?subject=KASYA%20Business">I want to be among the first</a>
+      </div>
+      <div class="card ent-card">
+        <h3>In development</h3>
+        <p>We are building the business version. Write to us and tell us what your team needs: that is how we prioritize what matters most.</p>
+        <p class="mono fine">vaultumbra33@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tecnologia" class="band"><div class="wrap">
+    <p class="eyebrow">Technology</p>
+    <h2>How it works inside</h2>
+    <p class="lead narrow">KASYA is built on <a class="term" href="#g-jami">Jami</a>, an open-source communication network. This is how a message of yours travels, without passing through anyone's server.</p>
+
+    <h3 class="sub">1. What P2P (peer-to-peer) is</h3>
+    <div class="twocol">
+      <div>
+        <p>In an ordinary app, every message goes through a <strong>central server</strong>: you talk to the company and the company talks to your contact. If that server goes down, slows down or is tampered with, everyone is affected.</p>
+        <p>In a <strong><a class="term" href="#g-p2p">P2P</a> (peer-to-peer)</strong> network there is no center. Each phone is both client and server: it connects directly to the others. There is no single point to shut down, watch or sell.</p>
+        <ul class="ticks">
+          <li>No server that stores your messages</li>
+          <li>No single point of failure</li>
+          <li>No company that can read you or close your account</li>
+        </ul>
+      </div>
+      <figure class="diagram">
+        <svg viewBox="0 0 680 290" role="img" aria-labelledby="t1 d1">
+          <title id="t1">Central-server network versus P2P network</title>
+          <desc id="d1">On the left, four phones connected to a central server. On the right, five phones connected directly to each other.</desc>
+          <text class="d-a" x="170" y="26" text-anchor="middle">With a central server</text>
+          <text class="d-a" x="510" y="26" text-anchor="middle">P2P (KASYA)</text>
+          <line class="d-sep" x1="340" y1="14" x2="340" y2="280"/>
+          <g class="d-line">
+            <line x1="60" y1="75" x2="170" y2="150"/><line x1="280" y1="75" x2="170" y2="150"/>
+            <line x1="60" y1="235" x2="170" y2="150"/><line x1="280" y1="235" x2="170" y2="150"/>
+          </g>
+          <rect class="d-hot" x="130" y="125" width="80" height="50" rx="10"/>
+          <text class="d-t" x="170" y="155" text-anchor="middle">Server</text>
+          <g class="d-node-g">
+            <rect class="d-node" x="30" y="55" width="60" height="40" rx="8"/><rect class="d-node" x="250" y="55" width="60" height="40" rx="8"/>
+            <rect class="d-node" x="30" y="215" width="60" height="40" rx="8"/><rect class="d-node" x="250" y="215" width="60" height="40" rx="8"/>
+          </g>
+          <g class="d-line d-flow">
+            <line x1="510" y1="75" x2="430" y2="145"/><line x1="510" y1="75" x2="590" y2="145"/>
+            <line x1="430" y1="145" x2="590" y2="145"/><line x1="430" y1="145" x2="460" y2="235"/>
+            <line x1="590" y1="145" x2="560" y2="235"/><line x1="460" y1="235" x2="560" y2="235"/>
+            <line x1="510" y1="75" x2="460" y2="235"/><line x1="510" y1="75" x2="560" y2="235"/>
+          </g>
+          <g class="d-node-g">
+            <rect class="d-node d-ok" x="480" y="55" width="60" height="40" rx="8"/><rect class="d-node d-ok" x="400" y="125" width="60" height="40" rx="8"/>
+            <rect class="d-node d-ok" x="560" y="125" width="60" height="40" rx="8"/><rect class="d-node d-ok" x="430" y="215" width="60" height="40" rx="8"/>
+            <rect class="d-node d-ok" x="530" y="215" width="60" height="40" rx="8"/>
+          </g>
+        </svg>
+        <figcaption>Left: everything goes through a center. Right: each device connects directly to the others.</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="sub">2. What a DHT is</h3>
+    <div class="twocol">
+      <figure class="diagram">
+        <svg viewBox="0 0 340 300" role="img" aria-labelledby="t2 d2">
+          <title id="t2">Ring of nodes of a distributed hash table</title>
+          <desc id="d2">Eight nodes in a ring. A key in the center points to the two closest nodes, which are the ones that store the data.</desc>
+          <circle class="d-line" cx="170" cy="150" r="105" stroke-dasharray="4 6"/>
+          <line class="d-acc" x1="170" y1="150" x2="170" y2="45" stroke-dasharray="6 5"/>
+          <line class="d-acc" x1="170" y1="150" x2="244" y2="76" stroke-dasharray="6 5"/>
+          <g>
+            <circle class="d-node" cx="275" cy="150" r="17"/><circle class="d-node" cx="244" cy="224" r="17"/>
+            <circle class="d-node" cx="170" cy="255" r="17"/><circle class="d-node" cx="96" cy="224" r="17"/>
+            <circle class="d-node" cx="65" cy="150" r="17"/><circle class="d-node" cx="96" cy="76" r="17"/>
+            <circle class="d-hot" cx="170" cy="45" r="19"/><circle class="d-hot" cx="244" cy="76" r="19"/>
+          </g>
+          <polygon class="d-key" points="170,134 186,150 170,166 154,150"/>
+          <text class="d-m" x="170" y="190" text-anchor="middle">key = hash(ID)</text>
+          <text class="d-s" x="170" y="49" text-anchor="middle">B</text>
+          <text class="d-s" x="244" y="80" text-anchor="middle">C</text>
+          <text class="d-m" x="275" y="154" text-anchor="middle">A</text><text class="d-m" x="244" y="228" text-anchor="middle">D</text>
+          <text class="d-m" x="170" y="259" text-anchor="middle">E</text><text class="d-m" x="96" y="228" text-anchor="middle">F</text>
+          <text class="d-m" x="65" y="154" text-anchor="middle">G</text><text class="d-m" x="96" y="80" text-anchor="middle">H</text>
+          <g class="dht-anim" aria-hidden="true">
+            <path class="d-trail" d="M96 224 L170 255 L244 224 L275 150 L244 76" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100">
+              <animate attributeName="stroke-dashoffset" dur="8s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.5;0.9;1" values="100;0;0;100"/>
+              <animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.85;1" values="1;1;0"/>
+            </path>
+            <circle class="d-pkt" r="6" cx="0" cy="0">
+              <animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.5;1" keyPoints="0;1;1" path="M96 224 L170 255 L244 224 L275 150 L244 76"/>
+              <animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.02;0.5;0.56;1" values="0;1;1;0;0"/>
+            </circle>
+            <circle class="d-ring" cx="244" cy="76" r="19" fill="none"><animate attributeName="r" dur="8s" repeatCount="indefinite" keyTimes="0;0.5;0.8;1" values="19;19;46;46"/><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.5;0.52;0.8;1" values="0;0;.9;0;0"/></circle>
+            <circle class="d-ring" cx="170" cy="45" r="19" fill="none"><animate attributeName="r" dur="8s" repeatCount="indefinite" keyTimes="0;0.56;0.86;1" values="19;19;46;46"/><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.56;0.58;0.86;1" values="0;0;.9;0;0"/></circle>
+            <text class="d-a" x="96" y="272" text-anchor="middle">asks<animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.02;0.45;0.5;1" values="0;1;1;0;0"/></text>
+            <text class="d-a" x="262" y="22" text-anchor="middle">have the data<animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.5;0.56;0.85;0.92;1" values="0;0;1;1;0;0"/></text>
+          </g>
+        </svg>
+        <figcaption>Nodes B and C, the closest to the key, store the data. Anyone can ask and reach them.</figcaption>
+      </figure>
+      <div>
+        <p>A <strong><a class="term" href="#g-dht">DHT</a> (Distributed Hash Table)</strong> is like a giant address book spread across thousands of phones, where none of them has the complete copy.</p>
+        <ul class="ticks">
+          <li>Each piece of data has a <strong>key</strong>, obtained by applying a <a class="term" href="#g-hash">hash</a> (a fingerprint) to your identifier.</li>
+          <li>The data is stored on the <a class="term" href="#g-nodo">nodes</a> whose identifier is <strong>closest</strong> to that key, and it is replicated on several in case one leaves.</li>
+          <li>To find something, each node brings you closer to the next nearest one: you arrive in a few hops, even if the network is huge.</li>
+          <li>Nobody is in charge: if a node disappears, the network rearranges itself.</li>
+        </ul>
+        <p>Jami uses <strong><a class="term" href="#g-opendht">OpenDHT</a></strong>, a DHT with a design similar to <a class="term" href="#g-kademlia">Kademlia</a>. On it, your phone publishes, signed, how to locate it, and your contact looks it up to find you.</p>
+      </div>
+    </div>
+    <ol class="journey tech">
+      <li><span class="stage">Step 1</span><h3>Your identity is born on your phone</h3>
+        <p>When you create your account, your cryptographic keys are generated on your device. There is no sign-up with phone or email: your identity is your key.</p></li>
+      <li><span class="stage">Step 2</span><h3>Finding your contact</h3>
+        <p>Instead of a central server, a distributed network (OpenDHT) works as a directory among all participants. Nobody controls it and there is no single point to shut down.</p></li>
+      <li><span class="stage">Step 3</span><h3>Direct connection</h3>
+        <p>The two phones connect to each other, getting through routers and networks with standard techniques (<a class="term" href="#g-ice">ICE</a>, <a class="term" href="#g-stun">STUN</a> and <a class="term" href="#g-turn">TURN</a>). Your messages travel from one device to the other.</p></li>
+      <li><span class="stage">Step 4</span><h3>End-to-end encryption</h3>
+        <p>Every conversation is encrypted with <a class="term" href="#g-tls">TLS</a> and calls with <a class="term" href="#g-srtp">SRTP</a>. Only you and your contact have the keys to open what you say to each other.</p></li>
+      <li><span class="stage">Step 5</span><h3>Conversations that sync by themselves</h3>
+        <p>Each chat is a "<a class="term" href="#g-swarm">swarm</a>": a shared history replicated across the participants' devices, with no master copy in the cloud.</p></li>
+      <li><span class="stage">Step 6</span><h3>KASYA layers</h3>
+        <p>On top of that engine we add your PIN, the emergency key, disappearing messages, photos without location, channels and a dark, understated interface.</p></li>
+    </ol>
+    <h3 class="sub">3. How two phones connect</h3>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 320" role="img" aria-labelledby="t3 d3">
+        <title id="t3">Connection sequence between two phones</title>
+        <desc id="d3">Ana publishes her location on the DHT network, Beto looks her up, they exchange network candidates and open a direct encrypted connection.</desc>
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="d-arrow" d="M0 0L10 5L0 10z"/></marker>
+          <marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="d-arrow-m" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <line class="d-life" x1="90" y1="46" x2="90" y2="312"/><line class="d-life" x1="320" y1="46" x2="320" y2="312"/><line class="d-life" x1="550" y1="46" x2="550" y2="312"/>
+        <rect class="d-node" x="40" y="8" width="100" height="36" rx="8"/><text class="d-t" x="90" y="32" text-anchor="middle">Ana</text>
+        <rect class="d-hot" x="260" y="8" width="120" height="36" rx="8"/><text class="d-t" x="320" y="32" text-anchor="middle">DHT network</text>
+        <rect class="d-node" x="500" y="8" width="100" height="36" rx="8"/><text class="d-t" x="550" y="32" text-anchor="middle">Beto</text>
+        <g class="seq" style="--i:0"><line class="d-seq" x1="92" y1="100" x2="316" y2="100" marker-end="url(#arb)"/>
+        <text class="d-s" x="205" y="92" text-anchor="middle">1 Publishes how to find her</text></g>
+        <g class="seq" style="--i:1"><line class="d-seq" x1="548" y1="140" x2="324" y2="140" marker-end="url(#arb)"/>
+        <text class="d-s" x="435" y="132" text-anchor="middle">2 Beto looks up Ana</text></g>
+        <g class="seq" style="--i:2"><line class="d-seq" x1="324" y1="180" x2="548" y2="180" stroke-dasharray="6 5" marker-end="url(#arb)"/>
+        <text class="d-s" x="435" y="172" text-anchor="middle">3 The network answers</text></g>
+        <g class="seq" style="--i:3"><line class="d-seq" x1="98" y1="226" x2="542" y2="226" stroke-dasharray="6 5" marker-start="url(#arb)" marker-end="url(#arb)"/>
+        <text class="d-s" x="320" y="218" text-anchor="middle">4 They exchange network candidates (encrypted)</text></g>
+        <g class="seq" style="--i:4"><line class="d-acc" x1="98" y1="284" x2="542" y2="284" marker-start="url(#ar)" marker-end="url(#ar)"/>
+        <text class="d-a" x="320" y="274" text-anchor="middle">5 Direct, encrypted connection (TLS)</text></g>
+      </svg>
+      <figcaption>The DHT network is only for finding each other. Once connected, messages go from phone to phone, without passing through it.</figcaption>
+    </figure>
+
+    <h3 class="sub">4. KASYA layers</h3>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 290" role="img" aria-labelledby="t4 d4">
+        <title id="t4">Application layers</title>
+        <desc id="d4">From top to bottom: KASYA interface, client, engine, P2P network and internet.</desc>
+        <g class="lay" style="--i:0"><rect class="d-hot" x="10" y="8" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="38">KASYA interface</text><text class="d-m" x="230" y="38">PIN · emergency key · channels · dark theme</text></g>
+        <g class="lay" style="--i:1"><rect class="d-node" x="10" y="64" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="94">Client (Kotlin)</text><text class="d-m" x="230" y="94">accounts · conversations · calls · contacts</text></g>
+        <g class="lay" style="--i:2"><rect class="d-node" x="10" y="120" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="150">Engine (C++)</text><text class="d-m" x="230" y="150">encryption · swarm (Git) · audio and video</text></g>
+        <g class="lay" style="--i:3"><rect class="d-node" x="10" y="176" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="206">P2P network</text><text class="d-m" x="230" y="206">OpenDHT · ICE / STUN / TURN · TLS · SRTP</text></g>
+        <g class="lay" style="--i:4"><rect class="d-node d-dim" x="10" y="232" width="620" height="48" rx="10"/>
+        <text class="d-t" x="26" y="262">Internet</text><text class="d-m" x="230" y="262">Wi-Fi or mobile data; no intermediate server</text></g>
+      </svg>
+      <figcaption>Everything you see is the top layer. The heavy lifting is done by the engine, which talks directly to other phones.</figcaption>
+    </figure>
+
+    <h3 class="sub">Central server or P2P: the comparison</h3>
+    <div class="compare">
+      <table>
+        <thead><tr><th></th><th>Central-server app</th><th class="us">KASYA (P2P)</th></tr></thead>
+        <tbody>
+          <tr><th>Where your messages live</th><td>On the company's servers</td><td class="us">On your phone and your contact's</td></tr>
+          <tr><th>Your identity</th><td>Phone number or email</td><td class="us">A key generated on your device</td></tr>
+          <tr><th>How people find you</th><td>Querying their database</td><td class="us">Querying the DHT network</td></tr>
+          <tr><th>If the server goes down</th><td>Nobody can communicate</td><td class="us">There is no server to go down</td></tr>
+          <tr><th>Who can see your metadata</th><td>The company and whoever pressures it</td><td class="us">There is no central place that gathers it</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chips">
+      <span>OpenDHT</span><span>TLS 1.3</span><span>SRTP</span><span>ICE / STUN / TURN</span><span>Git (swarm)</span><span>Kotlin · C++</span><span>GPLv3</span>
+    </div>
+    <p class="fine">Technical names of the Jami engine KASYA is based on. Implementation details may change between versions.</p>
+  </div></section>
+
+  <section id="nosotros" class="wrap section">
+    <p class="eyebrow">Who we are</p>
+    <h2>Mission, vision and goals</h2>
+    <div class="grid two">
+      <article class="card big accent">
+        <span class="badge">Mission</span>
+        <h3>Give you back your conversations</h3>
+        <p>To offer private, encrypted and decentralized messaging that is simple to use, so that any person or team can communicate without handing their location, identity or history to third parties.</p>
+      </article>
+      <article class="card big">
+        <span class="badge">Vision</span>
+        <h3>Communication without intermediaries</h3>
+        <p>A world where privacy is the norm and not a luxury: where every person and every organization owns their data, and where protecting what is yours is as easy as opening an app.</p>
+      </article>
+    </div>
+    <h3 class="topgap">Goals</h3>
+    <div class="grid four">
+      <article class="card"><span class="num">01</span><h3>Privacy by default</h3><p>Make the safest option the easiest one: photos without location, disappearing messages and an emergency key within everyone's reach.</p></article>
+      <article class="card"><span class="num">02</span><h3>No central servers</h3><p>Keep an architecture where your identity and your key live on your device.</p></article>
+      <article class="card"><span class="num">03</span><h3>Reach more people</h3><p>Grow a community of users who want to live safe and decentralized.</p></article>
+      <article class="card"><span class="num">04</span><h3>Business edition</h3><p>Bring this same discretion to teams and organizations, with their own administration and support.</p></article>
+    </div>
+  </section>
+
+  <section id="glosario" class="band">
+    <div class="wrap">
+      <p class="eyebrow">Glossary</p>
+      <h2>The odd terms, explained</h2>
+      <p class="lead narrow">The underlined terms throughout the page lead here. Tap any of them to see its meaning.</p>
+      <dl class="gloss">
+      <div id="g-apk"><dt>APK</dt><dd>Installation file of an Android app. KASYA is distributed as an APK from this page, instead of the Play Store.</dd></div>
+      <div id="g-canal"><dt>Channel</dt><dd>A KASYA space where only the administrator publishes and followers read.</dd></div>
+      <div id="g-cifrado-e2e"><dt>End-to-end encryption</dt><dd>Only the sender and the receiver have the keys. Nobody in between, neither the network nor a server, can read the content.</dd></div>
+      <div id="g-clave-emergencia"><dt>Emergency key</dt><dd>A second PIN. If typed on the lock screen, KASYA erases everything stored in the app and reopens as new.</dd></div>
+      <div id="g-dht"><dt>DHT (distributed hash table)</dt><dd>A directory spread across all the nodes of a network. Each piece of data has a key and is stored by the nodes closest to it; none of them has the complete directory.</dd></div>
+      <div id="g-exif"><dt>EXIF</dt><dd>Information the camera stores inside the photo: date, device model and, if enabled, the GPS location. KASYA removes it from JPEG photos before sending them.</dd></div>
+      <div id="g-gplv3"><dt>GPLv3</dt><dd>Free software license. It allows you to use, study, modify and share the program, and requires keeping those freedoms in derived versions.</dd></div>
+      <div id="g-hash"><dt>Hash</dt><dd>Fixed-length fingerprint calculated from a piece of data. A tiny change in the data produces a completely different fingerprint, and it cannot be reversed.</dd></div>
+      <div id="g-ice"><dt>ICE</dt><dd>Standard method for two devices behind routers to discover how to connect directly. It relies on STUN and TURN.</dd></div>
+      <div id="g-jami"><dt>Jami</dt><dd>Free distributed communication project that KASYA is built on.</dd></div>
+      <div id="g-kademlia"><dt>Kademlia</dt><dd>A widely used DHT design. Each node knows few distant neighbors and many close ones, which lets it find any data in a few hops.</dd></div>
+      <div id="g-malware"><dt>Malware</dt><dd>Software made to damage the device, take control of it or steal information.</dd></div>
+      <div id="g-mensajes-temporales"><dt>Disappearing messages</dt><dd>Messages that delete themselves when the chosen time is up. The timer is agreed on both sides of the chat.</dd></div>
+      <div id="g-metadatos"><dt>Metadata</dt><dd>Data about data: who talked to whom, when, for how long and from where. Even if the message is encrypted, metadata can reveal a lot.</dd></div>
+      <div id="g-nodo"><dt>Node</dt><dd>Each device that takes part in a network. In a P2P network, your phone is a node.</dd></div>
+      <div id="g-opendht"><dt>OpenDHT</dt><dd>Free implementation of a DHT, used by Jami so that users can find each other without a central server.</dd></div>
+      <div id="g-p2p"><dt>P2P (peer-to-peer)</dt><dd>A network in which devices communicate directly with each other, with no intermediate server controlling the communication.</dd></div>
+      <div id="g-sha"><dt>SHA-256</dt><dd>Hash function that produces a 256-bit fingerprint of a file. It is used to check that what you downloaded is identical to what was published.</dd></div>
+      <div id="g-spyware"><dt>Spyware</dt><dd>Software that secretly watches what you do and sends that information to others.</dd></div>
+      <div id="g-srtp"><dt>SRTP</dt><dd>Secure version of the real-time audio and video protocol. It encrypts and authenticates calls.</dd></div>
+      <div id="g-stun"><dt>STUN</dt><dd>Service that tells a device its public address, so it can connect to another.</dd></div>
+      <div id="g-swarm"><dt>Swarm</dt><dd>History of a conversation that is replicated among its participants and synchronized with Git-like technology.</dd></div>
+      <div id="g-tls"><dt>TLS</dt><dd>Connection encryption protocol, the same one that protects online banking.</dd></div>
+      <div id="g-turn"><dt>TURN</dt><dd>Fallback server that relays traffic when a direct connection is impossible. The content stays encrypted.</dd></div>
+      <div id="g-virustotal"><dt>VirusTotal</dt><dd>Free service that analyzes files with dozens of antivirus engines at once.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="wrap section final">
+    <h2>Your messages are yours.</h2>
+    <p class="lead">Encrypted. And nobody else sees them.</p>
+    <a class="btn" href="#descargar">Download KASYA</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p><strong>KASYA</strong> · Live safe. Live decentralized.</p>
+  <p class="fine"><a href="terms.html">Terms and conditions</a> · Based on free software (Jami, <a class="term" href="#g-gplv3">GPLv3</a>). © <span id="year"></span> KASYA.</p>
+</footer>
+
+<script src="../config.js?v=20261102m"></script>
+<script src="../assets/qrcode.min.js?v=20261102m" onerror="window.__noqr=true"></script>
+<script src="../assets/site.js?v=20261102m"></script>
+<script src="../assets/bg3d.js?v=20261102m" defer></script>
+</body>
+</html>

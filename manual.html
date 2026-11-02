@@ -7,18 +7,21 @@
 <meta name="description" content="Manual de usuario de KASYA: cómo crear tu cuenta, agregar contactos, chatear, llamar, usar canales y tiendas, y proteger tu privacidad.">
 <meta name="theme-color" content="#0b1020">
 <link rel="icon" href="assets/icon.png">
-<link rel="stylesheet" href="assets/style.css?v=20261102i">
+<link rel="stylesheet" href="assets/style.css?v=20261102m">
 <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('kasya-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
 </head>
 <body>
 <header class="nav">
   <a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="32" height="32"><span>KASYA</span></a>
-  <nav class="manual-nav">
+  <nav class="manual-nav" id="menu">
     <a href="index.html">Inicio</a>
     <a href="index.html#instalar">Instalar</a>
     <a class="btn btn-small" href="index.html#descargar">Descargar</a>
   </nav>
-  <button class="theme-btn" id="theme-btn" type="button" aria-label="Cambiar entre modo oscuro y claro" title="Modo oscuro / claro">☀</button>
+  <div class="nav-tools">
+    <a class="lang-btn" href="en/manual.html" hreflang="en" lang="en" title="English" aria-label="View in English">EN</a>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="Cambiar entre modo oscuro y claro" title="Modo oscuro / claro">☀</button>
+  </div>
 </header>
 <main class="wrap manual">
 <h1>Manual de usuario</h1>
@@ -32,7 +35,7 @@
 <li><a href="#m4">Chatear</a></li>
 <li><a href="#m5">Grupos</a></li>
 <li><a href="#m6">Llamadas y videollamadas</a></li>
-<li><a href="#m7">Canales y tiendas</a></li>
+<li><a href="#m7">Canales, tiendas y noticias</a></li>
 <li><a href="#m8">Privacidad y seguridad</a></li>
 <li><a href="#m9">Almacenamiento y respaldo</a></li>
 <li><a href="#m10">Problemas frecuentes</a></li>
@@ -45,6 +48,8 @@
 <h3>Contraseña y PIN de acceso (opcional)</h3>
 <p>En el primer paso de la creación de la cuenta puedes escribir una contraseña numérica. Si lo haces, esa misma clave funciona como tu <strong>PIN</strong>: KASYA te la pedirá al abrir la app. Si lo dejas vacío, la app abre sin PIN y puedes activarlo después en <strong>Ajustes &gt; Bloqueo con PIN</strong>. Los pasos siguientes (nombre de usuario y perfil) también se pueden saltar.</p>
 <div class="note warn"><strong>Anótalo en un lugar seguro.</strong> KASYA no tiene un servidor que pueda restablecerlo por ti.</div>
+<h3>Idioma</h3>
+<p>KASYA está en español e inglés. Cámbialo en <strong>Ajustes &gt; Idioma</strong> o en la pantalla de bienvenida. Los <strong>Términos y condiciones</strong> están en Ajustes.</p>
 <h3>Mantener KASYA conectada</h3>
 <p>KASYA no usa servidores de notificaciones. Para recibir mensajes y llamadas con la app cerrada debe seguir en ejecución. Cuando aparezca <strong>Mantén KASYA conectado</strong>, acepta y, en la siguiente pantalla, permite que ignore la optimización de batería.</p>
 
@@ -109,8 +114,8 @@
 </ul>
 <p>Las llamadas van cifradas de punta a punta. Para recibirlas con la app cerrada, KASYA debe seguir en ejecución (ver paso 1).</p>
 
-<h2 id="m7">7. Canales y tiendas</h2>
-<p>En <strong>Explorar</strong> hay dos pestañas: <strong>Canales</strong> y <strong>Tiendas</strong>.</p>
+<h2 id="m7">7. Canales, tiendas y noticias</h2>
+<p>En <strong>Explorar</strong> hay tres pestañas: <strong>Canales</strong>, <strong>Tiendas</strong> y <strong>Noticias</strong>.</p>
 <h3>Crear un canal</h3>
 <ol>
 <li>En Explorar toca <strong>Crear canal</strong>.</li>
@@ -132,6 +137,10 @@
 <li>Quien ve un producto puede tocar <strong>Preguntar al dueño</strong>, y se abre un chat con el mensaje listo.</li>
 </ol>
 <p class="fine">Los precios son de referencia. KASYA no procesa pagos: lo que se acuerde se resuelve entre las dos personas.</p>
+
+<h3>Noticias</h3>
+<p>La pestaña <strong>Noticias</strong> muestra titulares leídos directamente de los feeds RSS de cada medio, sin pasar por un servidor nuestro. Elige una región (Mundo, México, Latinoamérica, EE. UU., Europa, Rusia, China, Asia, Medio Oriente, África o Finanzas). Las notas aparecen agrupadas por día (<em>Hoy</em>, <em>Ayer</em> y fechas anteriores); KASYA guarda 7 días de titulares en tu teléfono. Toca una nota para abrirla en tu navegador. Los medios financiados por un Estado llevan una etiqueta.</p>
+<p class="fine">Al abrir esa pestaña, los medios ven tu dirección IP, como en cualquier sitio web.</p>
 
 <h2 id="m8">8. Privacidad y seguridad</h2>
 <h3>Bloqueo con PIN</h3>
@@ -173,8 +182,8 @@
 </main>
 <footer class="footer">
   <p><strong>KASYA</strong> · Vive seguro. Vive descentralizado.</p>
-  <p class="fine"><a href="index.html">Volver al inicio</a></p>
+  <p class="fine"><a href="index.html">Volver al inicio</a> · <a href="terminos.html">Términos y condiciones</a></p>
 </footer>
-<script src="assets/site.js?v=20261102i"></script>
+<script src="assets/site.js?v=20261102m"></script>
 </body>
 </html>

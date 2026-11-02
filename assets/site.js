@@ -86,25 +86,28 @@
 
 // Capturas de la app: carrusel (se muestra solo si hay en config.js)
 (function () {
-  var list = (window.KASYA && window.KASYA.shots) || [];
+  var en = document.documentElement.lang === "en", base = document.documentElement.getAttribute("data-base") || "";
+  var list = ((window.KASYA && window.KASYA.shots) || []).filter(function (s) { return !(en && s.es_only); });
   var box = document.getElementById("shots"), sec = document.getElementById("capturas");
   if (!box || !sec || !list.length) return;
   var slides = [], dots = [], cur = 0;
+  var capOf = function (s, n) { return (n + 1) + ". " + (((en && s.caption_en) || s.caption || "").replace(/^d+.s*/, "")); };
+  var altOf = function (s) { return (en && s.alt_en) || s.alt || capOf(s) || "KASYA"; };
   var cap = document.getElementById("shots-cap"), dotBox = document.getElementById("shots-dots");
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   list.forEach(function (s, n) {
     var f = document.createElement("figure"); f.className = "shot";
-    var i = document.createElement("img"); i.src = s.src; i.alt = s.alt || s.caption || "Captura de KASYA"; i.loading = "lazy"; i.draggable = false;
+    var i = document.createElement("img"); i.src = base + ((en && s.src_en) || s.src); i.alt = altOf(s); i.loading = "lazy"; i.draggable = false;
     f.appendChild(i); box.appendChild(f); slides.push(f);
     f.addEventListener("click", function () { go(n); });
-    var d = document.createElement("button"); d.type = "button"; d.className = "shots-dot"; d.setAttribute("aria-label", "Captura " + (n + 1));
+    var d = document.createElement("button"); d.type = "button"; d.className = "shots-dot"; d.setAttribute("aria-label", (en ? "Screenshot " : "Captura ") + (n + 1));
     d.addEventListener("click", function () { go(n); }); dotBox.appendChild(d); dots.push(d);
   });
   function mark(n) {
     cur = n;
     slides.forEach(function (f, k) { f.classList.toggle("on", k === n); });
     dots.forEach(function (d, k) { d.classList.toggle("on", k === n); d.setAttribute("aria-current", k === n ? "true" : "false"); });
-    cap.textContent = list[n].caption || "";
+    cap.textContent = capOf(list[n], n);
   }
   function go(n) {
     n = Math.max(0, Math.min(slides.length - 1, n));
@@ -132,3 +135,8 @@
   mark(0);
   requestAnimationFrame(function () { box.scrollLeft = 0; go(0); });
 })();
+
+// Recordar el idioma elegido con el botón ES / EN
+document.querySelectorAll(".lang-btn").forEach(function (a) {
+  a.addEventListener("click", function () { try { localStorage.setItem("kasya-lang", a.getAttribute("hreflang")); } catch (e) {} });
+});

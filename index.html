@@ -9,16 +9,16 @@
 <meta property="og:title" content="KASYA — Vive seguro. Vive descentralizado.">
 <meta property="og:description" content="Fotos sin ubicación, mensajes temporales y clave de emergencia. Sin servidores centrales.">
 <meta property="og:type" content="website">
+<link rel="alternate" hreflang="en" href="en/index.html">
 <link rel="icon" href="assets/icon.png">
-<link rel="stylesheet" href="assets/style.css?v=20261102l">
-<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('kasya-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
+<link rel="stylesheet" href="assets/style.css?v=20261102m">
+<script>document.documentElement.classList.add('js');try{if(!localStorage.getItem('kasya-lang')&&/^en/i.test(navigator.language||'')&&!location.hash){localStorage.setItem('kasya-lang','en');location.replace('en/index.html')}var t=localStorage.getItem('kasya-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
 </head>
 <body>
 
 <header class="nav">
   <a class="brand" href="#top"><img src="assets/icon.png" alt="" width="32" height="32"><span>KASYA</span></a>
-  <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
-  <nav id="menu">
+    <nav id="menu">
     <a href="#protege">Qué te protege</a>
     <a href="#verifica">Verifica</a>
     <a href="#instalar">Instalar</a>
@@ -29,7 +29,11 @@
     <a href="#glosario">Glosario</a>
     <a class="btn btn-small" href="#descargar">Descargar</a>
   </nav>
-  <button class="theme-btn" id="theme-btn" type="button" aria-label="Cambiar entre modo oscuro y claro" title="Modo oscuro / claro">☀</button>
+  <div class="nav-tools">
+    <a class="lang-btn" href="en/index.html" hreflang="en" lang="en" title="English" aria-label="View in English">EN</a>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="Cambiar entre modo oscuro y claro" title="Modo oscuro / claro">☀</button>
+    <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+  </div>
 </header>
 
 <main id="top">
@@ -127,7 +131,7 @@
         <ul class="ticks">
           <li><a class="term" href="#g-cifrado-e2e">Cifrado de punta a punta</a> en chats, llamadas y videollamadas</li>
           <li>Cuenta sin teléfono ni correo</li>
-          <li>Llamadas de grupo y <a class="term" href="#g-canal">canales</a> para publicar a quien te sigue</li>
+          <li>Llamadas de grupo y <a class="term" href="#g-canal">canales</a> para publicar a quien te sigue, tiendas y noticias de los feeds de cada medio</li>
           <li>Tema oscuro y sobrio, hecho para pasar desapercibido</li>
         </ul>
       </div>
@@ -162,7 +166,7 @@
         <a class="btn btn-ghost" href="https://www.virustotal.com/gui/file/87adae7544fa2b68c842c85ddf21469ecbb16cf142b6f059fce0ee2dab5877d4" target="_blank" rel="noopener">Ver nuestro reporte</a>
       </div>
     </div>
-    <p class="fine">Resultado del análisis del 2 de noviembre de 2026 sobre la versión 1.0; el análisis de la 1.0.1 está en curso (compara su SHA-256 arriba). Si algún análisis te muestra algo que no entiendas, escríbenos y lo aclaramos.</p>
+    <p class="fine">Resultado del análisis del 2 de noviembre de 2026 sobre la versión 1.0; el análisis de la 1.1.0 está en curso (compara su SHA-256 arriba). Si algún análisis te muestra algo que no entiendas, escríbenos y lo aclaramos.</p>
   </section>
 
   <section id="instalar" class="band"><div class="wrap">
@@ -451,12 +455,12 @@
 
 <footer class="footer">
   <p><strong>KASYA</strong> · Vive seguro. Vive descentralizado.</p>
-  <p class="fine">Basado en software libre (Jami, <a class="term" href="#g-gplv3">GPLv3</a>). © <span id="year"></span> KASYA.</p>
+  <p class="fine"><a href="terminos.html">Términos y condiciones</a> · Basado en software libre (Jami, <a class="term" href="#g-gplv3">GPLv3</a>). © <span id="year"></span> KASYA.</p>
 </footer>
 
-<script src="config.js?v=20261102l"></script>
-<script src="assets/qrcode.min.js?v=20261102l" onerror="window.__noqr=true"></script>
-<script src="assets/site.js?v=20261102l"></script>
-<script src="assets/bg3d.js?v=20261102l" defer></script>
+<script src="config.js?v=20261102m"></script>
+<script src="assets/qrcode.min.js?v=20261102m" onerror="window.__noqr=true"></script>
+<script src="assets/site.js?v=20261102m"></script>
+<script src="assets/bg3d.js?v=20261102m" defer></script>
 </body>
 </html>
