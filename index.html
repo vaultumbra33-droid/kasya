@@ -10,7 +10,7 @@
 <meta property="og:description" content="Fotos sin ubicación, mensajes temporales y clave de emergencia. Sin servidores centrales.">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/icon.png">
-<link rel="stylesheet" href="assets/style.css?v=20261102c">
+<link rel="stylesheet" href="assets/style.css?v=20261102d">
 </head>
 <body>
 
@@ -19,13 +19,12 @@
   <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
   <nav id="menu">
     <a href="#protege">Qué te protege</a>
-    <a href="#descentralizado">Descentralizado</a>
-    <a href="#tecnologia">Tecnología</a>
-    <a href="#glosario">Glosario</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#instalar">Instalar</a>
     <a href="#verifica">Verifica</a>
+    <a href="#instalar">Instalar</a>
     <a href="#empresas">Empresas</a>
+    <a href="#tecnologia">Cómo funciona</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#glosario">Glosario</a>
     <a class="btn btn-small" href="#descargar">Descargar</a>
   </nav>
 </header>
@@ -121,7 +120,71 @@
     </div>
   </section>
 
-  <section id="tecnologia" class="wrap section">
+  <section id="verifica" class="wrap section">
+    <p class="eyebrow">Confianza</p>
+    <h2>No nos creas: compruébalo</h2>
+    <p class="lead narrow">Un buen guía no te pide fe ciega: te entrega las herramientas para que tú mismo verifiques el camino.
+      Por eso te invitamos a revisar el <a class="term" href="#g-apk">APK</a> antes de instalarlo.</p>
+    <div class="grid three">
+      <article class="card"><span class="num">01</span><h3>Sin malware ni spyware</h3><p>KASYA no espía, no envía tus datos a nadie y no instala nada oculto. Por eso no tememos que lo revises.</p></article>
+      <article class="card"><span class="num">02</span><h3>Sin anuncios ni analíticas</h3><p>La versión que descargas no incluye publicidad ni servicios de seguimiento de terceros.</p></article>
+      <article class="card"><span class="num">03</span><h3>Basado en software libre</h3><p>Nace de Jami, un proyecto de código abierto que la comunidad lleva años auditando.</p></article>
+    </div>
+    <ol class="steps">
+      <li><strong>Compara la huella:</strong> el SHA-256 publicado arriba debe coincidir con el de tu archivo descargado.</li>
+      <li><strong>Pásalo por <a class="term" href="#g-virustotal">VirusTotal</a>:</strong> sube el APK en <a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener">virustotal.com</a> y ve cómo lo analizan decenas de antivirus a la vez.</li>
+      <li><strong>Revisa los permisos:</strong> en Ajustes de Android → Apps → KASYA verás exactamente a qué tiene acceso, y solo pide lo necesario para mensajes y llamadas.</li>
+    </ol>
+    <div class="vt">
+      <canvas id="qr-vt" class="vt-qr" width="180" height="180" data-url="https://www.virustotal.com/gui/file/87adae7544fa2b68c842c85ddf21469ecbb16cf142b6f059fce0ee2dab5877d4" aria-label="Código QR del reporte de VirusTotal"></canvas>
+      <p class="vt-score"><strong>0 de 66</strong> antivirus lo marcan en VirusTotal</p>
+      <p class="lead narrow">Presumimos el resultado y no nos escondemos: te invitamos a repetir el análisis tú mismo. Descarga el APK, súbelo y mira con tus propios ojos que está limpio.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener">Analízalo tú mismo en VirusTotal</a>
+        <a class="btn btn-ghost" href="https://www.virustotal.com/gui/file/87adae7544fa2b68c842c85ddf21469ecbb16cf142b6f059fce0ee2dab5877d4" target="_blank" rel="noopener">Ver nuestro reporte</a>
+      </div>
+    </div>
+    <p class="fine">Resultado del análisis del 2 de noviembre de 2026 sobre la versión 1.0. Si algún análisis te muestra algo que no entiendas, escríbenos y lo aclaramos.</p>
+  </section>
+
+  <section id="instalar" class="band"><div class="wrap">
+    <p class="eyebrow">Empezar</p>
+    <h2>Cuatro pasos y listo</h2>
+    <ol class="steps">
+      <li><strong>Descarga</strong> el archivo <code>kasya-<span data-version>1.0</span>.apk</code> con el botón o el QR.</li>
+      <li><strong>Ábrelo</strong>. Android te pedirá permitir instalar apps de esta fuente: acepta solo para este archivo.</li>
+      <li><strong>Crea tu cuenta</strong> y define tu PIN. Te recomendamos definir también la clave de emergencia.</li>
+      <li><strong>Invita</strong> a quien quieras con tu código QR dentro de la app.</li>
+    </ol>
+    <p class="fine">Tu equipo puede mostrar un aviso porque KASYA aún no se distribuye por Play Store. Para verificar el archivo, compara su huella SHA-256 con la publicada arriba. Descarga siempre desde esta página.</p>
+    <div class="cta"><a class="btn" href="#descargar">Descargar KASYA</a></div>
+  </div></section>
+
+  <section id="empresas" class="wrap section">
+    <div class="enterprise">
+      <div>
+        <p class="eyebrow">Para equipos</p>
+        <h2>KASYA Empresarial</h2>
+        <p class="lead narrow">La misma discreción para tu organización: mensajería interna que no depende de terceros
+          y que tú controlas.</p>
+        <ul class="ticks">
+          <li>Alta y baja de usuarios administrada por la empresa</li>
+          <li>Canales por área, con permisos de publicación</li>
+          <li>Llamadas y videollamadas de equipo</li>
+          <li>Instalación en infraestructura propia</li>
+          <li>Soporte y acompañamiento en la implementación</li>
+        </ul>
+        <a class="btn" href="mailto:vaultumbra33@gmail.com?subject=KASYA%20Empresarial">Quiero ser de los primeros</a>
+      </div>
+      <div class="card ent-card">
+        <h3>En desarrollo</h3>
+        <p>Estamos construyendo la versión empresarial. Escríbenos y cuéntanos qué necesita tu equipo: así priorizamos lo que más importa.</p>
+        <p class="mono fine">vaultumbra33@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tecnologia" class="band"><div class="wrap">
     <p class="eyebrow">Tecnología</p>
     <h2>Cómo funciona por dentro</h2>
     <p class="lead narrow">KASYA se construye sobre <a class="term" href="#g-jami">Jami</a>, una red de comunicación de código abierto. Así viaja un mensaje tuyo, sin pasar por el servidor de nadie.</p>
@@ -284,6 +347,30 @@
       <span>OpenDHT</span><span>TLS 1.3</span><span>SRTP</span><span>ICE / STUN / TURN</span><span>Git (swarm)</span><span>Kotlin · C++</span><span>GPLv3</span>
     </div>
     <p class="fine">Nombres técnicos del motor Jami sobre el que se basa KASYA. Los detalles de implementación pueden evolucionar entre versiones.</p>
+  </div></section>
+
+  <section id="nosotros" class="wrap section">
+    <p class="eyebrow">Quiénes somos</p>
+    <h2>Misión, visión y objetivos</h2>
+    <div class="grid two">
+      <article class="card big accent">
+        <span class="badge">Misión</span>
+        <h3>Devolverte tus conversaciones</h3>
+        <p>Ofrecer una mensajería privada, cifrada y descentralizada, simple de usar, para que cualquier persona o equipo se comunique sin entregar su ubicación, su identidad ni su historial a terceros.</p>
+      </article>
+      <article class="card big">
+        <span class="badge">Visión</span>
+        <h3>Una comunicación sin intermediarios</h3>
+        <p>Un mundo donde la privacidad sea lo normal y no un lujo: donde cada persona y cada organización sea dueña de sus datos, y donde proteger lo propio sea tan fácil como abrir una app.</p>
+      </article>
+    </div>
+    <h3 class="topgap">Objetivos</h3>
+    <div class="grid four">
+      <article class="card"><span class="num">01</span><h3>Privacidad por defecto</h3><p>Que lo más seguro sea también lo más fácil: fotos sin ubicación, mensajes temporales y clave de emergencia al alcance de todos.</p></article>
+      <article class="card"><span class="num">02</span><h3>Sin servidores centrales</h3><p>Mantener una arquitectura donde tu identidad y tu llave viven en tu dispositivo.</p></article>
+      <article class="card"><span class="num">03</span><h3>Llegar a más personas</h3><p>Hacer crecer una comunidad de usuarios que quiere vivir seguro y descentralizado.</p></article>
+      <article class="card"><span class="num">04</span><h3>Versión Empresarial</h3><p>Llevar esta misma discreción a equipos y organizaciones, con administración y soporte propios.</p></article>
+    </div>
   </section>
 
   <section id="glosario" class="band">
@@ -321,94 +408,6 @@
     </div>
   </section>
 
-  <section id="nosotros" class="wrap section">
-    <p class="eyebrow">Quiénes somos</p>
-    <h2>Misión, visión y objetivos</h2>
-    <div class="grid two">
-      <article class="card big accent">
-        <span class="badge">Misión</span>
-        <h3>Devolverte tus conversaciones</h3>
-        <p>Ofrecer una mensajería privada, cifrada y descentralizada, simple de usar, para que cualquier persona o equipo se comunique sin entregar su ubicación, su identidad ni su historial a terceros.</p>
-      </article>
-      <article class="card big">
-        <span class="badge">Visión</span>
-        <h3>Una comunicación sin intermediarios</h3>
-        <p>Un mundo donde la privacidad sea lo normal y no un lujo: donde cada persona y cada organización sea dueña de sus datos, y donde proteger lo propio sea tan fácil como abrir una app.</p>
-      </article>
-    </div>
-    <h3 class="topgap">Objetivos</h3>
-    <div class="grid four">
-      <article class="card"><span class="num">01</span><h3>Privacidad por defecto</h3><p>Que lo más seguro sea también lo más fácil: fotos sin ubicación, mensajes temporales y clave de emergencia al alcance de todos.</p></article>
-      <article class="card"><span class="num">02</span><h3>Sin servidores centrales</h3><p>Mantener una arquitectura donde tu identidad y tu llave viven en tu dispositivo.</p></article>
-      <article class="card"><span class="num">03</span><h3>Llegar a más personas</h3><p>Hacer crecer una comunidad de usuarios que quiere vivir seguro y descentralizado.</p></article>
-      <article class="card"><span class="num">04</span><h3>Versión Empresarial</h3><p>Llevar esta misma discreción a equipos y organizaciones, con administración y soporte propios.</p></article>
-    </div>
-  </section>
-
-  <section id="instalar" class="band"><div class="wrap">
-    <p class="eyebrow">Empezar</p>
-    <h2>Cuatro pasos y listo</h2>
-    <ol class="steps">
-      <li><strong>Descarga</strong> el archivo <code>kasya-<span data-version>1.0</span>.apk</code> con el botón o el QR.</li>
-      <li><strong>Ábrelo</strong>. Android te pedirá permitir instalar apps de esta fuente: acepta solo para este archivo.</li>
-      <li><strong>Crea tu cuenta</strong> y define tu PIN. Te recomendamos definir también la clave de emergencia.</li>
-      <li><strong>Invita</strong> a quien quieras con tu código QR dentro de la app.</li>
-    </ol>
-    <p class="fine">Tu equipo puede mostrar un aviso porque KASYA aún no se distribuye por Play Store. Para verificar el archivo, compara su huella SHA-256 con la publicada arriba. Descarga siempre desde esta página.</p>
-    <div class="cta"><a class="btn" href="#descargar">Descargar KASYA</a></div>
-  </div></section>
-
-  <section id="verifica" class="wrap section">
-    <p class="eyebrow">Confianza</p>
-    <h2>No nos creas: compruébalo</h2>
-    <p class="lead narrow">Un buen guía no te pide fe ciega: te entrega las herramientas para que tú mismo verifiques el camino.
-      Por eso te invitamos a revisar el <a class="term" href="#g-apk">APK</a> antes de instalarlo.</p>
-    <div class="grid three">
-      <article class="card"><span class="num">01</span><h3>Sin malware ni spyware</h3><p>KASYA no espía, no envía tus datos a nadie y no instala nada oculto. Por eso no tememos que lo revises.</p></article>
-      <article class="card"><span class="num">02</span><h3>Sin anuncios ni analíticas</h3><p>La versión que descargas no incluye publicidad ni servicios de seguimiento de terceros.</p></article>
-      <article class="card"><span class="num">03</span><h3>Basado en software libre</h3><p>Nace de Jami, un proyecto de código abierto que la comunidad lleva años auditando.</p></article>
-    </div>
-    <ol class="steps">
-      <li><strong>Compara la huella:</strong> el SHA-256 publicado arriba debe coincidir con el de tu archivo descargado.</li>
-      <li><strong>Pásalo por <a class="term" href="#g-virustotal">VirusTotal</a>:</strong> sube el APK en <a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener">virustotal.com</a> y ve cómo lo analizan decenas de antivirus a la vez.</li>
-      <li><strong>Revisa los permisos:</strong> en Ajustes de Android → Apps → KASYA verás exactamente a qué tiene acceso, y solo pide lo necesario para mensajes y llamadas.</li>
-    </ol>
-    <div class="vt">
-      <canvas id="qr-vt" class="vt-qr" width="180" height="180" data-url="https://www.virustotal.com/gui/file/87adae7544fa2b68c842c85ddf21469ecbb16cf142b6f059fce0ee2dab5877d4" aria-label="Código QR del reporte de VirusTotal"></canvas>
-      <p class="vt-score"><strong>0 de 66</strong> antivirus lo marcan en VirusTotal</p>
-      <p class="lead narrow">Presumimos el resultado y no nos escondemos: te invitamos a repetir el análisis tú mismo. Descarga el APK, súbelo y mira con tus propios ojos que está limpio.</p>
-      <div class="cta">
-        <a class="btn" href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener">Analízalo tú mismo en VirusTotal</a>
-        <a class="btn btn-ghost" href="https://www.virustotal.com/gui/file/87adae7544fa2b68c842c85ddf21469ecbb16cf142b6f059fce0ee2dab5877d4" target="_blank" rel="noopener">Ver nuestro reporte</a>
-      </div>
-    </div>
-    <p class="fine">Resultado del análisis del 2 de noviembre de 2026 sobre la versión 1.0. Si algún análisis te muestra algo que no entiendas, escríbenos y lo aclaramos.</p>
-  </section>
-
-  <section id="empresas" class="wrap section">
-    <div class="enterprise">
-      <div>
-        <p class="eyebrow">Para equipos</p>
-        <h2>KASYA Empresarial</h2>
-        <p class="lead narrow">La misma discreción para tu organización: mensajería interna que no depende de terceros
-          y que tú controlas.</p>
-        <ul class="ticks">
-          <li>Alta y baja de usuarios administrada por la empresa</li>
-          <li>Canales por área, con permisos de publicación</li>
-          <li>Llamadas y videollamadas de equipo</li>
-          <li>Instalación en infraestructura propia</li>
-          <li>Soporte y acompañamiento en la implementación</li>
-        </ul>
-        <a class="btn" href="mailto:vaultumbra33@gmail.com?subject=KASYA%20Empresarial">Quiero ser de los primeros</a>
-      </div>
-      <div class="card ent-card">
-        <h3>En desarrollo</h3>
-        <p>Estamos construyendo la versión empresarial. Escríbenos y cuéntanos qué necesita tu equipo: así priorizamos lo que más importa.</p>
-        <p class="mono fine">vaultumbra33@gmail.com</p>
-      </div>
-    </div>
-  </section>
-
   <section class="wrap section final">
     <h2>Tus mensajes son tuyos.</h2>
     <p class="lead">Cifrados. Y nadie más los ve.</p>
@@ -422,8 +421,8 @@
   <p class="fine">Basado en software libre (Jami, <a class="term" href="#g-gplv3">GPLv3</a>). © <span id="year"></span> KASYA.</p>
 </footer>
 
-<script src="config.js?v=20261102c"></script>
-<script src="assets/qrcode.min.js?v=20261102c" onerror="window.__noqr=true"></script>
-<script src="assets/site.js?v=20261102c"></script>
+<script src="config.js?v=20261102d"></script>
+<script src="assets/qrcode.min.js?v=20261102d" onerror="window.__noqr=true"></script>
+<script src="assets/site.js?v=20261102d"></script>
 </body>
 </html>
