@@ -151,6 +151,10 @@ section > .diagram { margin: 20px 0; }
 .compare tr:last-child th, .compare tr:last-child td { border-bottom: 0; }
 
 .gloss { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 20px; }
+a.term { color: var(--accent-2); text-decoration: underline dotted; text-underline-offset: 3px; }
+a.term:hover { text-decoration-style: solid; }
+.gloss div { scroll-margin-top: 90px; transition: border-color .2s, background .2s; }
+.gloss div:target { border-color: var(--accent-2); background: #15254d; }
 .gloss div { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
 .gloss dt { color: var(--accent-2); font-family: "JetBrains Mono", ui-monospace, Consolas, monospace; font-weight: 700; margin-bottom: 4px; }
 .gloss dd { margin: 0; color: var(--muted); font-size: .93rem; }

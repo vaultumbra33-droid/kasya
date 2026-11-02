@@ -21,6 +21,7 @@
     <a href="#protege">Qué te protege</a>
     <a href="#descentralizado">Descentralizado</a>
     <a href="#tecnologia">Tecnología</a>
+    <a href="#glosario">Glosario</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#instalar">Instalar</a>
     <a href="#verifica">Verifica</a>
@@ -48,7 +49,7 @@
       <p>Escanea con tu celular o toca el botón.</p>
       <div class="qr-wrap"><canvas id="qr" width="220" height="220" aria-label="Código QR de descarga"></canvas><p id="qr-fallback" class="fine" hidden>QR no disponible: usa el botón.</p></div>
       <a class="btn btn-block" id="download-btn-2" href="#">Descargar KASYA <span data-version>1.0</span></a>
-      <p class="fine mono" id="sha">SHA-256: <span data-sha>pendiente</span></p>
+      <p class="fine mono" id="sha"><a class="term" href="#g-sha">SHA-256</a>: <span data-sha>pendiente</span></p>
       <p class="fine"><a href="https://www.virustotal.com/gui/file/87adae7544fa2b68c842c85ddf21469ecbb16cf142b6f059fce0ee2dab5877d4" target="_blank" rel="noopener">✓ 0 de 66 antivirus lo marcan en VirusTotal</a></p>
     </div>
   </section>
@@ -61,7 +62,7 @@
         <article class="card"><h3>Dónde estuviste</h3><p>Cada foto con GPS lleva escondidas las coordenadas exactas de donde la tomaste: tu casa, tu trabajo, la escuela de tus hijos. Basta con enviarla.</p></article>
         <article class="card"><h3>Con qué la tomaste</h3><p>Las fotos también guardan la fecha y la hora, la marca y el modelo de tu teléfono y, a veces, el nombre del autor.</p></article>
         <article class="card"><h3>Qué dijiste</h3><p>Tus mensajes pasan y se quedan en servidores que no controlas, y pueden vivir ahí mucho después de que tú los borras.</p></article>
-        <article class="card"><h3>Con quién hablas</h3><p>Aunque el contenido vaya cifrado, quién te escribe, cuándo y cuánto tiempo hablan suele quedar registrado. Esos metadatos cuentan tu vida.</p></article>
+        <article class="card"><h3>Con quién hablas</h3><p>Aunque el contenido vaya cifrado, quién te escribe, cuándo y cuánto tiempo hablan suele quedar registrado. Esos <a class="term" href="#g-metadatos">metadatos</a> cuentan tu vida.</p></article>
         <article class="card"><h3>Quién eres</h3><p>Una cuenta ligada a tu número de teléfono: tu identidad, entregada de antemano, y a menudo también tu lista de contactos.</p></article>
         <article class="card"><h3>Desde dónde te conectas</h3><p>Tu dirección IP revela tu ciudad y tu proveedor de internet cada vez que te conectas a un servidor ajeno.</p></article>
         <article class="card"><h3>Qué te gusta y qué temes</h3><p>Con tus conversaciones y hábitos se arman perfiles para publicidad y análisis. Tu vida diaria se vuelve un producto.</p></article>
@@ -97,7 +98,7 @@
         <p>Sin PIN, nadie entra. Tu teléfono desbloqueado ya no significa tus chats al descubierto.</p>
       </article>
     </div>
-    <p class="fine">Los archivos que tú mismo exportes fuera de la app no se borran con la clave de emergencia. Los mensajes temporales dependen de que ambas personas usen KASYA.</p>
+    <p class="fine">Los archivos que tú mismo exportes fuera de la app no se borran con la <a class="term" href="#g-clave-emergencia">clave de emergencia</a>. Los <a class="term" href="#g-mensajes-temporales">mensajes temporales</a> dependen de que ambas personas usen KASYA.</p>
   </section>
 
   <section id="descentralizado" class="band">
@@ -107,9 +108,9 @@
         <h2>Sin servidor central, no hay a quién pedirle tus datos</h2>
         <p class="lead">KASYA conecta teléfono con teléfono. Tu identidad se genera en tu dispositivo, no se registra con tu número y no depende de que una empresa siga existiendo, o siga siendo amable.</p>
         <ul class="ticks">
-          <li>Cifrado de punta a punta en chats, llamadas y videollamadas</li>
+          <li><a class="term" href="#g-cifrado-e2e">Cifrado de punta a punta</a> en chats, llamadas y videollamadas</li>
           <li>Cuenta sin teléfono ni correo</li>
-          <li>Llamadas de grupo y canales para publicar a quien te sigue</li>
+          <li>Llamadas de grupo y <a class="term" href="#g-canal">canales</a> para publicar a quien te sigue</li>
           <li>Tema oscuro y sobrio, hecho para pasar desapercibido</li>
         </ul>
       </div>
@@ -123,13 +124,13 @@
   <section id="tecnologia" class="wrap section">
     <p class="eyebrow">Tecnología</p>
     <h2>Cómo funciona por dentro</h2>
-    <p class="lead narrow">KASYA se construye sobre Jami, una red de comunicación de código abierto. Así viaja un mensaje tuyo, sin pasar por el servidor de nadie.</p>
+    <p class="lead narrow">KASYA se construye sobre <a class="term" href="#g-jami">Jami</a>, una red de comunicación de código abierto. Así viaja un mensaje tuyo, sin pasar por el servidor de nadie.</p>
 
     <h3 class="sub">1. Qué es P2P (de igual a igual)</h3>
     <div class="twocol">
       <div>
         <p>En una app normal, todos los mensajes pasan por un <strong>servidor central</strong>: tú le hablas a la empresa y la empresa le habla a tu contacto. Si ese servidor cae, se vuelve lento o es intervenido, todos quedan afectados.</p>
-        <p>En una red <strong>P2P (peer-to-peer)</strong> no hay centro. Cada teléfono es a la vez cliente y servidor: se conecta directamente con los demás. No hay un único punto que apagar, vigilar o vender.</p>
+        <p>En una red <strong><a class="term" href="#g-p2p">P2P</a> (peer-to-peer)</strong> no hay centro. Cada teléfono es a la vez cliente y servidor: se conecta directamente con los demás. No hay un único punto que apagar, vigilar o vender.</p>
         <ul class="ticks">
           <li>Sin servidor que guarde tus mensajes</li>
           <li>Sin un punto único de falla</li>
@@ -195,14 +196,14 @@
         <figcaption>Los nodos B y C, los más cercanos a la clave, guardan el dato. Cualquiera puede preguntar y llegar a ellos.</figcaption>
       </figure>
       <div>
-        <p>Una <strong>DHT (Distributed Hash Table, tabla hash distribuida)</strong> es como una agenda gigante repartida entre miles de teléfonos, donde ninguno la tiene completa.</p>
+        <p>Una <strong><a class="term" href="#g-dht">DHT</a> (Distributed Hash Table, tabla <a class="term" href="#g-hash">hash</a> distribuida)</strong> es como una agenda gigante repartida entre miles de teléfonos, donde ninguno la tiene completa.</p>
         <ul class="ticks">
           <li>Cada dato tiene una <strong>clave</strong>, que sale de aplicar un hash (una huella) a tu identificador.</li>
-          <li>El dato se guarda en los nodos cuyo identificador queda <strong>más cerca</strong> de esa clave, y se replica en varios por si alguno se va.</li>
+          <li>El dato se guarda en los <a class="term" href="#g-nodo">nodos</a> cuyo identificador queda <strong>más cerca</strong> de esa clave, y se replica en varios por si alguno se va.</li>
           <li>Para encontrar algo, cada nodo te acerca al siguiente más cercano: llegas en pocos saltos, aunque la red sea enorme.</li>
           <li>Nadie manda: si un nodo desaparece, la red se reacomoda sola.</li>
         </ul>
-        <p>Jami usa <strong>OpenDHT</strong>, una DHT de diseño similar a Kademlia. En ella tu teléfono publica, de forma firmada, cómo localizarlo, y tu contacto la consulta para encontrarte.</p>
+        <p>Jami usa <strong><a class="term" href="#g-opendht">OpenDHT</a></strong>, una DHT de diseño similar a <a class="term" href="#g-kademlia">Kademlia</a>. En ella tu teléfono publica, de forma firmada, cómo localizarlo, y tu contacto la consulta para encontrarte.</p>
       </div>
     </div>
     <ol class="journey tech">
@@ -211,11 +212,11 @@
       <li><span class="stage">Paso 2</span><h3>Encontrar a tu contacto</h3>
         <p>En lugar de un servidor central, una red distribuida (OpenDHT) funciona como directorio entre todos los participantes. Nadie la controla y no hay un solo punto que apagar.</p></li>
       <li><span class="stage">Paso 3</span><h3>Conexión directa</h3>
-        <p>Los dos teléfonos se conectan entre sí, atravesando routers y redes con técnicas estándar (ICE, STUN y TURN). Tus mensajes viajan de un equipo al otro.</p></li>
+        <p>Los dos teléfonos se conectan entre sí, atravesando routers y redes con técnicas estándar (<a class="term" href="#g-ice">ICE</a>, <a class="term" href="#g-stun">STUN</a> y <a class="term" href="#g-turn">TURN</a>). Tus mensajes viajan de un equipo al otro.</p></li>
       <li><span class="stage">Paso 4</span><h3>Cifrado de punta a punta</h3>
-        <p>Cada conversación va cifrada con TLS y las llamadas con SRTP. Solo tú y tu contacto tienen las llaves para abrir lo que se dicen.</p></li>
+        <p>Cada conversación va cifrada con <a class="term" href="#g-tls">TLS</a> y las llamadas con <a class="term" href="#g-srtp">SRTP</a>. Solo tú y tu contacto tienen las llaves para abrir lo que se dicen.</p></li>
       <li><span class="stage">Paso 5</span><h3>Conversaciones que se sincronizan solas</h3>
-        <p>Cada chat es un "swarm": un historial compartido que se replica entre los dispositivos de los participantes, sin copia maestra en la nube.</p></li>
+        <p>Cada chat es un "<a class="term" href="#g-swarm">swarm</a>": un historial compartido que se replica entre los dispositivos de los participantes, sin copia maestra en la nube.</p></li>
       <li><span class="stage">Paso 6</span><h3>Capas de KASYA</h3>
         <p>Encima de ese motor agregamos tu PIN, la clave de emergencia, mensajes temporales, fotos sin ubicación, canales y una interfaz oscura y sobria.</p></li>
     </ol>
@@ -282,18 +283,42 @@
     <div class="chips">
       <span>OpenDHT</span><span>TLS 1.3</span><span>SRTP</span><span>ICE / STUN / TURN</span><span>Git (swarm)</span><span>Kotlin · C++</span><span>GPLv3</span>
     </div>
-    <h3 class="sub">Glosario rápido</h3>
-    <dl class="gloss">
-      <div><dt>P2P</dt><dd>Peer-to-peer: los equipos se comunican directamente, sin servidor intermedio.</dd></div>
-      <div><dt>DHT</dt><dd>Tabla hash distribuida: un directorio repartido entre todos los nodos de la red.</dd></div>
-      <div><dt>Hash</dt><dd>Huella de longitud fija que se calcula a partir de un dato; sirve como clave.</dd></div>
-      <div><dt>ICE</dt><dd>Método estándar para que dos equipos detrás de routers encuentren cómo conectarse.</dd></div>
-      <div><dt>STUN / TURN</dt><dd>Ayudas de ICE: STUN descubre tu dirección pública; TURN retransmite solo si la conexión directa es imposible.</dd></div>
-      <div><dt>TLS</dt><dd>Protocolo de cifrado de la conexión, el mismo que protege la banca en línea.</dd></div>
-      <div><dt>SRTP</dt><dd>Versión cifrada del protocolo de audio y video en tiempo real, usada en las llamadas.</dd></div>
-      <div><dt>Swarm</dt><dd>Historial de una conversación que se replica entre sus participantes, basado en Git.</dd></div>
-    </dl>
     <p class="fine">Nombres técnicos del motor Jami sobre el que se basa KASYA. Los detalles de implementación pueden evolucionar entre versiones.</p>
+  </section>
+
+  <section id="glosario" class="band">
+    <div class="wrap">
+      <p class="eyebrow">Glosario</p>
+      <h2>Los términos raros, explicados</h2>
+      <p class="lead narrow">Los términos subrayados en toda la página llevan aquí. Toca cualquiera para ver su significado.</p>
+      <dl class="gloss">
+      <div id="g-apk"><dt>APK</dt><dd>Archivo de instalación de una app de Android. KASYA se distribuye como APK desde esta página, en lugar de Play Store.</dd></div>
+      <div id="g-canal"><dt>Canal</dt><dd>Espacio de KASYA donde solo el administrador publica y quienes lo siguen leen.</dd></div>
+      <div id="g-cifrado-e2e"><dt>Cifrado de punta a punta</dt><dd>Solo quien envía y quien recibe tienen las llaves. Nadie en medio, ni la red ni un servidor, puede leer el contenido.</dd></div>
+      <div id="g-clave-emergencia"><dt>Clave de emergencia</dt><dd>Un segundo PIN. Si se escribe en la pantalla de bloqueo, KASYA borra todo lo guardado en la app y se reabre como nueva.</dd></div>
+      <div id="g-dht"><dt>DHT (tabla hash distribuida)</dt><dd>Directorio repartido entre todos los nodos de una red. Cada dato tiene una clave y lo guardan los nodos más cercanos a ella; ninguno tiene el directorio completo.</dd></div>
+      <div id="g-exif"><dt>EXIF</dt><dd>Información que la cámara guarda dentro de la foto: fecha, modelo del equipo y, si está activo, la ubicación GPS. KASYA la quita de las fotos JPEG antes de enviarlas.</dd></div>
+      <div id="g-gplv3"><dt>GPLv3</dt><dd>Licencia de software libre. Permite usar, estudiar, modificar y compartir el programa, y exige mantener esas libertades en las versiones derivadas.</dd></div>
+      <div id="g-hash"><dt>Hash</dt><dd>Huella de longitud fija calculada a partir de un dato. Un cambio mínimo en el dato produce una huella totalmente distinta, y no se puede revertir.</dd></div>
+      <div id="g-ice"><dt>ICE</dt><dd>Método estándar para que dos equipos detrás de routers descubran cómo conectarse directamente. Se apoya en STUN y TURN.</dd></div>
+      <div id="g-jami"><dt>Jami</dt><dd>Proyecto libre de comunicación distribuida sobre el que se construye KASYA.</dd></div>
+      <div id="g-kademlia"><dt>Kademlia</dt><dd>Diseño muy usado de DHT. Cada nodo conoce pocos vecinos lejanos y muchos cercanos, lo que permite encontrar cualquier dato en pocos saltos.</dd></div>
+      <div id="g-malware"><dt>Malware</dt><dd>Software hecho para dañar el dispositivo, tomar su control o robar información.</dd></div>
+      <div id="g-mensajes-temporales"><dt>Mensajes temporales</dt><dd>Mensajes que se borran solos cuando se cumple el tiempo elegido. El temporizador queda acordado en ambos lados del chat.</dd></div>
+      <div id="g-metadatos"><dt>Metadatos</dt><dd>Datos sobre los datos: quién habló con quién, cuándo, cuánto duró y desde dónde. Aunque el mensaje vaya cifrado, los metadatos pueden revelar mucho.</dd></div>
+      <div id="g-nodo"><dt>Nodo</dt><dd>Cada equipo que participa en una red. En una red P2P, tu teléfono es un nodo.</dd></div>
+      <div id="g-opendht"><dt>OpenDHT</dt><dd>Implementación libre de una DHT, usada por Jami para que los usuarios se encuentren sin un servidor central.</dd></div>
+      <div id="g-p2p"><dt>P2P (peer-to-peer)</dt><dd>Red en la que los equipos se comunican directamente entre sí, sin un servidor intermedio que controle la comunicación.</dd></div>
+      <div id="g-sha"><dt>SHA-256</dt><dd>Función hash que produce una huella de 256 bits de un archivo. Sirve para comprobar que lo que descargaste es idéntico a lo publicado.</dd></div>
+      <div id="g-spyware"><dt>Spyware</dt><dd>Software que vigila en secreto lo que haces y envía esa información a otros.</dd></div>
+      <div id="g-srtp"><dt>SRTP</dt><dd>Versión segura del protocolo de audio y video en tiempo real. Cifra y autentica las llamadas.</dd></div>
+      <div id="g-stun"><dt>STUN</dt><dd>Servicio que le dice a un equipo cuál es su dirección pública, para poder conectarse con otro.</dd></div>
+      <div id="g-swarm"><dt>Swarm</dt><dd>Historial de una conversación que se replica entre sus participantes y se sincroniza con una tecnología de tipo Git.</dd></div>
+      <div id="g-tls"><dt>TLS</dt><dd>Protocolo de cifrado de las conexiones, el mismo que protege la banca en línea.</dd></div>
+      <div id="g-turn"><dt>TURN</dt><dd>Servidor de respaldo que retransmite el tráfico cuando la conexión directa es imposible. El contenido sigue cifrado.</dd></div>
+      <div id="g-virustotal"><dt>VirusTotal</dt><dd>Servicio gratuito que analiza archivos con decenas de antivirus a la vez.</dd></div>
+      </dl>
+    </div>
   </section>
 
   <section id="nosotros" class="wrap section">
@@ -337,7 +362,7 @@
     <p class="eyebrow">Confianza</p>
     <h2>No nos creas: compruébalo</h2>
     <p class="lead narrow">Un buen guía no te pide fe ciega: te entrega las herramientas para que tú mismo verifiques el camino.
-      Por eso te invitamos a revisar el APK antes de instalarlo.</p>
+      Por eso te invitamos a revisar el <a class="term" href="#g-apk">APK</a> antes de instalarlo.</p>
     <div class="grid three">
       <article class="card"><span class="num">01</span><h3>Sin malware ni spyware</h3><p>KASYA no espía, no envía tus datos a nadie y no instala nada oculto. Por eso no tememos que lo revises.</p></article>
       <article class="card"><span class="num">02</span><h3>Sin anuncios ni analíticas</h3><p>La versión que descargas no incluye publicidad ni servicios de seguimiento de terceros.</p></article>
@@ -345,7 +370,7 @@
     </div>
     <ol class="steps">
       <li><strong>Compara la huella:</strong> el SHA-256 publicado arriba debe coincidir con el de tu archivo descargado.</li>
-      <li><strong>Pásalo por VirusTotal:</strong> sube el APK en <a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener">virustotal.com</a> y ve cómo lo analizan decenas de antivirus a la vez.</li>
+      <li><strong>Pásalo por <a class="term" href="#g-virustotal">VirusTotal</a>:</strong> sube el APK en <a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener">virustotal.com</a> y ve cómo lo analizan decenas de antivirus a la vez.</li>
       <li><strong>Revisa los permisos:</strong> en Ajustes de Android → Apps → KASYA verás exactamente a qué tiene acceso, y solo pide lo necesario para mensajes y llamadas.</li>
     </ol>
     <div class="vt">
@@ -394,7 +419,7 @@
 
 <footer class="footer">
   <p><strong>KASYA</strong> · Vive seguro. Vive descentralizado.</p>
-  <p class="fine">Basado en software libre (Jami, GPLv3). © <span id="year"></span> KASYA.</p>
+  <p class="fine">Basado en software libre (Jami, <a class="term" href="#g-gplv3">GPLv3</a>). © <span id="year"></span> KASYA.</p>
 </footer>
 
 <script src="config.js"></script>
