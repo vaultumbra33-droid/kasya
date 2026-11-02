@@ -7,6 +7,16 @@
     var a = document.getElementById(id);
     if (a) { a.href = c.apkUrl; a.setAttribute("download", ""); }
   });
+  var mb = document.getElementById("menu-btn"), menu = document.getElementById("menu");
+  if (mb && menu) {
+    var setMenu = function (open) {
+      menu.classList.toggle("open", open);
+      mb.setAttribute("aria-expanded", open ? "true" : "false");
+      mb.textContent = open ? "✕" : "☰";
+    };
+    mb.addEventListener("click", function () { setMenu(!menu.classList.contains("open")); });
+    menu.addEventListener("click", function (e) { if (e.target.tagName === "A") setMenu(false); });
+  }
   var y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 

@@ -112,11 +112,22 @@ h3 { margin: 0 0 8px; font-size: 1.1rem; }
 .footer { border-top: 1px solid var(--line); padding: 32px 24px; text-align: center; }
 .footer p { margin: 4px 0; }
 
+.menu-btn { display: none; background: transparent; border: 1px solid var(--line); color: var(--text); font-size: 1.3rem; line-height: 1; padding: 6px 12px; border-radius: 10px; cursor: pointer; }
+section[id] { scroll-margin-top: 72px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 16px; }
+.chips span { border: 1px solid var(--line); background: var(--card); color: var(--accent-2); padding: 6px 14px; border-radius: 999px; font-family: "JetBrains Mono", ui-monospace, Consolas, monospace; font-size: .82rem; }
+
+@media (max-width: 1000px) {
+  .menu-btn { display: block; }
+  .nav nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: 8px 24px 16px; }
+  .nav nav.open { display: flex; }
+  .nav nav a { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .nav nav a.btn { margin-top: 12px; text-align: center; border-bottom: 0; }
+}
 @media (max-width: 860px) {
   .hero, .enterprise { grid-template-columns: minmax(0, 1fr); }
   .grid.three, .grid.four, .journey { grid-template-columns: 1fr 1fr; }
   .grid.two { grid-template-columns: minmax(0, 1fr); }
-  .nav nav a:not(.btn) { display: none; }
 }
 @media (max-width: 560px) {
   .grid.three, .grid.four, .journey { grid-template-columns: 1fr; }

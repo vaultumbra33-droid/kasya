@@ -16,9 +16,11 @@
 
 <header class="nav">
   <a class="brand" href="#top"><img src="assets/icon.png" alt="" width="32" height="32"><span>KASYA</span></a>
-  <nav>
+  <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+  <nav id="menu">
     <a href="#protege">Qué te protege</a>
     <a href="#descentralizado">Descentralizado</a>
+    <a href="#tecnologia">Tecnología</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#instalar">Instalar</a>
     <a href="#verifica">Verifica</a>
@@ -116,6 +118,30 @@
         <p>Vive en tu equipo. Nadie la guarda por ti, y por eso nadie puede entregarla.</p>
       </div>
     </div>
+  </section>
+
+  <section id="tecnologia" class="wrap section">
+    <p class="eyebrow">Tecnología</p>
+    <h2>Cómo funciona por dentro</h2>
+    <p class="lead narrow">KASYA se construye sobre Jami, una red de comunicación de código abierto. Así viaja un mensaje tuyo, sin pasar por el servidor de nadie.</p>
+    <ol class="journey tech">
+      <li><span class="stage">Paso 1</span><h3>Tu identidad nace en tu teléfono</h3>
+        <p>Al crear tu cuenta se generan tus llaves criptográficas en tu dispositivo. No hay registro con teléfono ni correo: tu identidad es tu llave.</p></li>
+      <li><span class="stage">Paso 2</span><h3>Encontrar a tu contacto</h3>
+        <p>En lugar de un servidor central, una red distribuida (OpenDHT) funciona como directorio entre todos los participantes. Nadie la controla y no hay un solo punto que apagar.</p></li>
+      <li><span class="stage">Paso 3</span><h3>Conexión directa</h3>
+        <p>Los dos teléfonos se conectan entre sí, atravesando routers y redes con técnicas estándar (ICE, STUN y TURN). Tus mensajes viajan de un equipo al otro.</p></li>
+      <li><span class="stage">Paso 4</span><h3>Cifrado de punta a punta</h3>
+        <p>Cada conversación va cifrada con TLS y las llamadas con SRTP. Solo tú y tu contacto tienen las llaves para abrir lo que se dicen.</p></li>
+      <li><span class="stage">Paso 5</span><h3>Conversaciones que se sincronizan solas</h3>
+        <p>Cada chat es un "swarm": un historial compartido que se replica entre los dispositivos de los participantes, sin copia maestra en la nube.</p></li>
+      <li><span class="stage">Paso 6</span><h3>Capas de KASYA</h3>
+        <p>Encima de ese motor agregamos tu PIN, la clave de emergencia, mensajes temporales, fotos sin ubicación, canales y una interfaz oscura y sobria.</p></li>
+    </ol>
+    <div class="chips">
+      <span>OpenDHT</span><span>TLS 1.3</span><span>SRTP</span><span>ICE / STUN / TURN</span><span>Git (swarm)</span><span>Kotlin · C++</span><span>GPLv3</span>
+    </div>
+    <p class="fine">Nombres técnicos del motor Jami sobre el que se basa KASYA. Los detalles de implementación pueden evolucionar entre versiones.</p>
   </section>
 
   <section id="nosotros" class="wrap section">
