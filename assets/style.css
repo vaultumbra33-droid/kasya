@@ -129,7 +129,7 @@ section > .diagram { margin: 20px 0; }
 .d-node { fill: var(--bg-2); stroke: var(--line); stroke-width: 2; }
 .d-ok { stroke: var(--accent-2); }
 .d-hot { fill: var(--hot); stroke: var(--accent-2); stroke-width: 2.5; }
-.d-dim { opacity: .75; }
+.d-dim { opacity: 1; }
 .d-key { fill: var(--accent-2); }
 .d-line { stroke: var(--line); stroke-width: 2; fill: none; }
 .d-sep { stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 3 6; }
@@ -273,3 +273,8 @@ svg circle.d-hot, .d-key { animation: pulse 2.2s ease-in-out infinite; transform
 .shot { flex: 0 0 auto; width: min(240px, 62vw); margin: 0; scroll-snap-align: center; }
 .shot img { display: block; width: 100%; height: auto; border-radius: 26px; border: 6px solid #05070f; box-shadow: 0 10px 30px rgba(0,0,0,.35); background: #05070f; }
 .shot figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: .9rem; }
+
+/* Fondo 3D */
+#bg3d { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 1; }
+.js .band { background: color-mix(in srgb, var(--bg-2) 86%, transparent); }
+@media print { #bg3d { display: none; } }
