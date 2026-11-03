@@ -1,11 +1,28 @@
 // Único archivo que hay que editar al publicar una nueva versión.
 window.KASYA = {
-  version: "1.1.1",
+  version: "1.1.2",
   // Enlace directo al APK. Con GitHub Releases:
-  // https://github.com/<usuario>/<repositorio>/releases/download/v1.1.1/kasya-1.1.1.apk
-  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.1.1/kasya-1.1.1.apk",
+  // https://github.com/<usuario>/<repositorio>/releases/download/v1.1.2/kasya-1.1.2.apk
+  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.1.2/kasya-1.1.2.apk",
   size: "45 MB",
-  sha256: "6374bc9a003f62dfe0493d9fd6b35cfe365a63afc7bf559eda01616733f94a4d",
+  sha256: "3382f01c8847f536f109988c52c2d80b7ec118a23f4595e6a0a50ad6be9f2f20",
+  changelog: [
+    { version: "1.1.2", date: "2026-11-02",
+      es: ["Buscar actualizaciones desde Ajustes: compara tu versión con la del sitio y te lleva a la descarga.", "Compartir KASYA: envía el enlace de descarga desde Ajustes.", "Barra inferior sin el hueco sobrante bajo las etiquetas."],
+      en: ["Check for updates from Settings: compares your version with the site and takes you to the download.", "Share KASYA: send the download link from Settings.", "Bottom bar without the extra gap under the labels."] },
+    { version: "1.1.1", date: "2026-11-02",
+      es: ["Barra inferior compacta que se adapta a pantallas angostas (Z Fold, POCO).", "Encabezado de día de Noticias más discreto."],
+      en: ["Compact bottom bar that adapts to narrow screens (Z Fold, POCO).", "More discreet day header in News."] },
+    { version: "1.1.0", date: "2026-11-02",
+      es: ["Pestaña Noticias en Explorar: titulares directos de los feeds de cada medio, por región y por día.", "Términos y condiciones dentro de la app y en el sitio.", "App y sitio en español e inglés, con selector de idioma."],
+      en: ["News tab in Explore: headlines straight from each outlet's own feeds, by region and day.", "Terms and conditions inside the app and on the site.", "App and site in English and Spanish, with a language picker."] },
+    { version: "1.0.1", date: "2026-11-02",
+      es: ["Galería de capturas tipo carrusel en el sitio.", "Ajustes menores de la primera versión."],
+      en: ["Screenshot carousel on the site.", "Minor fixes to the first release."] },
+    { version: "1.0", date: "2026-11-01",
+      es: ["Primera versión: mensajería P2P cifrada, PIN, clave de emergencia, mensajes temporales, canales y tiendas."],
+      en: ["First release: encrypted P2P messaging, PIN, emergency key, disappearing messages, channels and stores."] }
+  ],
   // Capturas reales de la app: { src: "assets/shots/01.png", caption: "..." }
   shots: [
     { src: "assets/shots/01-bienvenida.png", src_en: "assets/shots/01-bienvenida-en.png", caption: "Bienvenida: creas tu cuenta en segundos, sin teléfono ni correo. Términos e idioma a un toque.", caption_en: "Welcome: create your account in seconds, with no phone number or email. Terms and language one tap away.", alt: "Pantalla de bienvenida de KASYA", alt_en: "KASYA welcome screen" },

@@ -1,0 +1,8 @@
+{
+  "version": "1.1.2",
+  "versionCode": 511,
+  "apkUrl": "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.1.2/kasya-1.1.2.apk",
+  "sha256": "3382f01c8847f536f109988c52c2d80b7ec118a23f4595e6a0a50ad6be9f2f20",
+  "notes_es": "- Buscar actualizaciones desde Ajustes: compara tu versión con la del sitio y te lleva a la descarga.\n- Compartir KASYA: envía el enlace de descarga desde Ajustes.\n- Barra inferior sin el hueco sobrante bajo las etiquetas.",
+  "notes_en": "- Check for updates from Settings: compares your version with the site and takes you to the download.\n- Share KASYA: send the download link from Settings.\n- Bottom bar without the extra gap under the labels."
+}

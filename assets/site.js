@@ -140,3 +140,20 @@
 document.querySelectorAll(".lang-btn").forEach(function (a) {
   a.addEventListener("click", function () { try { localStorage.setItem("kasya-lang", a.getAttribute("hreflang")); } catch (e) {} });
 });
+
+(function () {
+  var box = document.getElementById("changelog"), K = window.KASYA;
+  if (!box || !K || !K.changelog) return;
+  var en = document.documentElement.lang === "en";
+  K.changelog.forEach(function (r, i) {
+    var d = document.createElement("details");
+    if (i === 0) d.open = true;
+    var s = document.createElement("summary");
+    s.textContent = "KASYA " + r.version + " · " + r.date + (i === 0 ? (en ? " (latest)" : " (la más reciente)") : "");
+    d.appendChild(s);
+    var ul = document.createElement("ul");
+    (en ? r.en : r.es).forEach(function (t) { var li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
+    d.appendChild(ul);
+    box.appendChild(d);
+  });
+})();

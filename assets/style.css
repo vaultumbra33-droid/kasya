@@ -303,3 +303,9 @@ svg circle.d-hot, .d-key { animation: pulse 2.2s ease-in-out infinite; transform
 .lang-btn { display: grid; place-items: center; min-width: 40px; height: 38px; padding: 0 10px; border: 1px solid var(--line); border-radius: 10px; color: var(--text); text-decoration: none; font-size: .8rem; font-weight: 700; letter-spacing: .06em; }
 .lang-btn:hover { background: var(--card); }
 @media (max-width: 1000px) { .nav nav { margin-left: 0; } .nav nav + .nav-tools, .nav-tools { margin-left: auto; } }
+
+/* Novedades */
+.changelog { display: grid; gap: 10px; max-width: 760px; }
+.changelog details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
+.changelog summary { cursor: pointer; font-weight: 700; }
+.changelog ul { margin: 10px 0 2px; padding-left: 20px; line-height: 1.55; }
