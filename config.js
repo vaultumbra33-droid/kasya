@@ -1,11 +1,11 @@
 // Único archivo que hay que editar al publicar una nueva versión.
 window.KASYA = {
-  version: "1.1.0",
+  version: "1.1.1",
   // Enlace directo al APK. Con GitHub Releases:
-  // https://github.com/<usuario>/<repositorio>/releases/download/v1.1.0/kasya-1.1.0.apk
-  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.1.0/kasya-1.1.0.apk",
+  // https://github.com/<usuario>/<repositorio>/releases/download/v1.1.1/kasya-1.1.1.apk
+  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.1.1/kasya-1.1.1.apk",
   size: "45 MB",
-  sha256: "34343440d59c5ceb9b6b8eb043ae8960da5e717fc232347d63fde1091e044fc1",
+  sha256: "6374bc9a003f62dfe0493d9fd6b35cfe365a63afc7bf559eda01616733f94a4d",
   // Capturas reales de la app: { src: "assets/shots/01.png", caption: "..." }
   shots: [
     { src: "assets/shots/01-bienvenida.png", src_en: "assets/shots/01-bienvenida-en.png", caption: "Bienvenida: creas tu cuenta en segundos, sin teléfono ni correo. Términos e idioma a un toque.", caption_en: "Welcome: create your account in seconds, with no phone number or email. Terms and language one tap away.", alt: "Pantalla de bienvenida de KASYA", alt_en: "KASYA welcome screen" },
