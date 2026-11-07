@@ -5,11 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KASYA — Live safe. Live decentralized.</title>
 <meta name="description" content="KASYA is private messaging with no central servers: photos without location, disappearing messages and an emergency key that erases everything. Download the APK.">
+<link rel="canonical" href="https://vaultumbra33-droid.github.io/kasya/en/index.html">
+<link rel="alternate" hreflang="es" href="https://vaultumbra33-droid.github.io/kasya/index.html">
+<link rel="alternate" hreflang="en" href="https://vaultumbra33-droid.github.io/kasya/en/index.html">
+<link rel="alternate" hreflang="x-default" href="https://vaultumbra33-droid.github.io/kasya/index.html">
+<meta property="og:url" content="https://vaultumbra33-droid.github.io/kasya/en/index.html">
+<meta property="og:site_name" content="KASYA">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://vaultumbra33-droid.github.io/kasya/assets/icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="index,follow">
 <meta name="theme-color" content="#0b1020">
 <meta property="og:title" content="KASYA — Live safe. Live decentralized.">
 <meta property="og:description" content="Photos without location, disappearing messages and an emergency key. No central servers.">
 <meta property="og:type" content="website">
-<link rel="alternate" hreflang="es" href="../index.html">
 <link rel="icon" href="../assets/icon.png">
 <link rel="stylesheet" href="../assets/style.css?v=20261102m">
 <script>document.documentElement.classList.add('js');try{localStorage.setItem('kasya-lang','en');var t=localStorage.getItem('kasya-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
@@ -43,7 +52,7 @@
     <div class="hero-copy">
       <p class="eyebrow">Private messaging · Version <span data-version>1.0</span></p>
       <h1>Live safe.<br>Live decentralized.</h1>
-      <p class="lead">Today your conversations live on another company's server. With KASYA they live on your phone, encrypted,
+      <p class="lead">Today your conversations live on another company's server. With KASYA they live on your phone and travel encrypted,
         and only you decide what leaves it.</p>
       <div class="cta">
         <a class="btn" id="download-btn" href="#descargar">Download KASYA</a>
@@ -97,15 +106,45 @@
       <article class="card big accent">
         <span class="badge">Emergency</span>
         <h3>Emergency key</h3>
-        <p>You set a second PIN. If someone forces you to open the app and you type that PIN, KASYA erases everything: accounts, messages, photos, documents and settings, and opens again as new. To anyone watching, it just restarted.</p>
+        <p>You set a second PIN. If someone forces you to open the app and you type that PIN, KASYA silently erases conversations, contacts, photos, documents and settings, keeps your account and opens again empty and unlocked. To anyone watching, it just restarted.</p>
       </article>
       <article class="card big">
         <span class="badge">Access</span>
         <h3>Your app opens with your PIN</h3>
-        <p>With a PIN, nobody gets in. Your phone being unlocked no longer means your chats are exposed.</p>
+        <p>With a PIN, the app does not open without it. Your phone being unlocked no longer leaves your chats in plain view.</p>
+      </article>
+      <article class="card big">
+        <span class="badge">Automatic</span>
+        <h3>It cleans itself if something goes wrong</h3>
+        <p>If someone gets the PIN wrong as many times as you choose (5 to 20), or you go days without opening the app (the “dead-man switch”: 1 to 14 days), KASYA does the same silent cleanup. Nothing is shown on screen.</p>
+      </article>
+      <article class="card big">
+        <span class="badge">Alert</span>
+        <h3>Warn whoever you choose</h3>
+        <p>Before cleaning up, KASYA can send a message you write to your trusted contacts, with your last known location if you allow it. If there is no network, it does not go out.</p>
+      </article>
+      <article class="card big">
+        <span class="badge">Trip</span>
+        <h3>Follow me</h3>
+        <p>One tap from the menu and your trusted contacts get your live location for 1, 2 or 8 hours. Android shows a notification while it is being shared.</p>
+      </article>
+      <article class="card big">
+        <span class="badge">Backup</span>
+        <h3>Encrypted account backup</h3>
+        <p>Optional: a daily copy of your account (not your messages), encrypted with a long passphrase only you know, in the folder you choose: USB, SD card or a synced folder. Without the passphrase nobody can open it, not even us.</p>
+      </article>
+      <article class="card big">
+        <span class="badge">Storage</span>
+        <h3>Protected storage</h3>
+        <p>Optional: encrypts with a long passphrase what KASYA keeps itself (today, your status). With the <a class="term" href="#g-clave-emergencia">emergency key</a> the phone forgets the key; you choose whether it can be recovered with the passphrase or destroyed for good. Your conversations are not covered yet.</p>
+      </article>
+      <article class="card big">
+        <span class="badge">Discretion</span>
+        <h3>Notifications with no clues</h3>
+        <p>They can say just “New message”: no name, no text and no quick reply.</p>
       </article>
     </div>
-    <p class="fine">Files you export yourself outside the app are not deleted by the <a class="term" href="#g-clave-emergencia">emergency key</a>. <a class="term" href="#g-mensajes-temporales">Disappearing messages</a> depend on both people using KASYA.</p>
+    <p class="fine">All of this is optional and is set up in Settings > PIN lock. KASYA encrypts content while it travels; what stays stored on your phone is protected by the phone itself, except what protected storage covers. Files you export yourself outside the app are not deleted by the <a class="term" href="#g-clave-emergencia">emergency key</a>. <a class="term" href="#g-mensajes-temporales">Disappearing messages</a> depend on both people using KASYA.</p>
   </section>
 
   <section id="capturas" class="band" hidden>
@@ -137,8 +176,8 @@
         </ul>
       </div>
       <div class="card ent-card">
-        <h3>Your key is yours</h3>
-        <p>It lives on your device. Nobody keeps it for you, and that is why nobody can hand it over.</p>
+        <h3>Your account is only yours</h3>
+        <p>Your account is not stored on any company's server: it lives only on your phone. That is why nobody can take it from you or hand it to others. The flip side: if you lose your phone and made no backup, nobody can recover it for you.</p>
       </div>
     </div>
   </section>
@@ -151,10 +190,10 @@
     <div class="grid three">
       <article class="card"><span class="num">01</span><h3>No malware or spyware</h3><p>KASYA does not spy, does not send your data to anyone and does not install anything hidden. That is why we are not afraid of you checking it.</p></article>
       <article class="card"><span class="num">02</span><h3>No ads or analytics</h3><p>The version you download includes no advertising or third-party tracking services.</p></article>
-      <article class="card"><span class="num">03</span><h3>Based on free software</h3><p>It comes from Jami, an open-source project that the community has audited for years.</p></article>
+      <article class="card"><span class="num">03</span><h3>Based on free software</h3><p>It comes from <a class="term" href="#g-jami">Jami</a>, an open-source project that the community has audited for years.</p></article>
     </div>
     <ol class="steps">
-      <li><strong>Compare the fingerprint:</strong> the SHA-256 published above must match that of your downloaded file.</li>
+      <li><strong>Compare the fingerprint:</strong> the <a class="term" href="#g-sha">SHA-256</a> published above must match that of your downloaded file.</li>
       <li><strong>Run it through <a class="term" href="#g-virustotal">VirusTotal</a>:</strong> upload the APK at <a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener">virustotal.com</a> and watch dozens of antivirus engines analyze it at once.</li>
       <li><strong>Check the permissions:</strong> in Android Settings → Apps → KASYA you will see exactly what it can access, and it only asks for what messages and calls need.</li>
     </ol>
@@ -182,11 +221,11 @@
     <ol class="steps">
       <li><strong>Download</strong> the file <code>kasya-<span data-version>1.0</span>.apk</code> with the button or the QR.</li>
       <li><strong>Open it</strong>. Android will ask you to allow installing apps from this source: accept only for this file.</li>
-      <li><strong>Create your account</strong> and, if you want, set your PIN. We also recommend setting the emergency key.</li>
+      <li><strong>Create your account</strong> and, if you want, set your PIN. We also recommend setting the <a class="term" href="#g-clave-emergencia">emergency key</a>.</li>
       <li><strong>Invite</strong> whoever you want with your QR code inside the app.</li>
     </ol>
     <p class="fine">Questions about using the app? Read the <a href="manual.html">user manual</a>.</p>
-    <p class="fine">Your device may show a warning because KASYA is not yet distributed through the Play Store. To verify the file, compare its SHA-256 fingerprint with the one published above. Always download from this page.</p>
+    <p class="fine">Your device may show a warning because KASYA is not yet distributed through the Play Store. To verify the file, compare its <a class="term" href="#g-sha">SHA-256</a> fingerprint with the one published above. Always download from this page.</p>
     <div class="cta"><a class="btn" href="#descargar">Download KASYA</a></div>
   </div></section>
 
@@ -199,7 +238,7 @@
           and that you control.</p>
         <ul class="ticks">
           <li>User onboarding and removal managed by the company</li>
-          <li>Channels by area, with publishing permissions</li>
+          <li><a class="term" href="#g-canal">Channels</a> by area, with publishing permissions</li>
           <li>Team calls and video calls</li>
           <li>Installation on your own infrastructure</li>
           <li>Support and guidance during rollout</li>
@@ -300,10 +339,10 @@
             <text class="d-a" x="262" y="22" text-anchor="middle">have the data<animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.5;0.56;0.85;0.92;1" values="0;0;1;1;0;0"/></text>
           </g>
         </svg>
-        <figcaption>Nodes B and C, the closest to the key, store the data. Anyone can ask and reach them.</figcaption>
+        <figcaption><a class="term" href="#g-nodo">Nodes</a> B and C, the closest to the key, store the data. Anyone can ask and reach them.</figcaption>
       </figure>
       <div>
-        <p>A <strong><a class="term" href="#g-dht">DHT</a> (Distributed Hash Table)</strong> is like a giant address book spread across thousands of phones, where none of them has the complete copy.</p>
+        <p>A <strong><a class="term" href="#g-dht">DHT</a> (Distributed <a class="term" href="#g-hash">Hash</a> Table)</strong> is like a giant address book spread across thousands of phones, where none of them has the complete copy.</p>
         <ul class="ticks">
           <li>Each piece of data has a <strong>key</strong>, obtained by applying a <a class="term" href="#g-hash">hash</a> (a fingerprint) to your identifier.</li>
           <li>The data is stored on the <a class="term" href="#g-nodo">nodes</a> whose identifier is <strong>closest</strong> to that key, and it is replicated on several in case one leaves.</li>
@@ -325,7 +364,7 @@
       <li><span class="stage">Step 5</span><h3>Conversations that sync by themselves</h3>
         <p>Each chat is a "<a class="term" href="#g-swarm">swarm</a>": a shared history replicated across the participants' devices, with no master copy in the cloud.</p></li>
       <li><span class="stage">Step 6</span><h3>KASYA layers</h3>
-        <p>On top of that engine we add your PIN, the emergency key, disappearing messages, photos without location, channels and a dark, understated interface.</p></li>
+        <p>On top of that engine we add your PIN, the <a class="term" href="#g-clave-emergencia">emergency key</a>, <a class="term" href="#g-mensajes-temporales">disappearing messages</a>, photos without location, <a class="term" href="#g-canal">channels</a> and a dark, understated interface.</p></li>
     </ol>
     <h3 class="sub">3. How two phones connect</h3>
     <figure class="diagram">
@@ -360,7 +399,7 @@
         <title id="t4">Application layers</title>
         <desc id="d4">From top to bottom: KASYA interface, client, engine, P2P network and internet.</desc>
         <g class="lay" style="--i:0"><rect class="d-hot" x="10" y="8" width="620" height="48" rx="10"/>
-        <text class="d-t" x="26" y="38">KASYA interface</text><text class="d-m" x="230" y="38">PIN · emergency key · channels · dark theme</text></g>
+        <text class="d-t" x="26" y="38">KASYA interface</text><text class="d-m" x="230" y="38">PIN · emergency key · backup · channels · dark theme</text></g>
         <g class="lay" style="--i:1"><rect class="d-node" x="10" y="64" width="620" height="48" rx="10"/>
         <text class="d-t" x="26" y="94">Client (Kotlin)</text><text class="d-m" x="230" y="94">accounts · conversations · calls · contacts</text></g>
         <g class="lay" style="--i:2"><rect class="d-node" x="10" y="120" width="620" height="48" rx="10"/>
@@ -382,13 +421,13 @@
           <tr><th>Your identity</th><td>Phone number or email</td><td class="us">A key generated on your device</td></tr>
           <tr><th>How people find you</th><td>Querying their database</td><td class="us">Querying the DHT network</td></tr>
           <tr><th>If the server goes down</th><td>Nobody can communicate</td><td class="us">There is no server to go down</td></tr>
-          <tr><th>Who can see your metadata</th><td>The company and whoever pressures it</td><td class="us">There is no central place that gathers it</td></tr>
+          <tr><th>Who can see your <a class="term" href="#g-metadatos">metadata</a></th><td>The company and whoever pressures it</td><td class="us">There is no central place that gathers it</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="chips">
-      <span>OpenDHT</span><span>TLS 1.3</span><span>SRTP</span><span>ICE / STUN / TURN</span><span>Git (swarm)</span><span>Kotlin · C++</span><span>GPLv3</span>
+      <span>OpenDHT</span><span>TLS 1.3</span><span>SRTP</span><span>ICE / STUN / TURN</span><span>Git (swarm)</span><span>Kotlin · C++</span><span><a class="term" href="#g-gplv3">GPLv3</a></span>
     </div>
     <p class="fine">Technical names of the Jami engine KASYA is based on. Implementation details may change between versions.</p>
   </div></section>
@@ -410,7 +449,7 @@
     </div>
     <h3 class="topgap">Goals</h3>
     <div class="grid four">
-      <article class="card"><span class="num">01</span><h3>Privacy by default</h3><p>Make the safest option the easiest one: photos without location, disappearing messages and an emergency key within everyone's reach.</p></article>
+      <article class="card"><span class="num">01</span><h3>Privacy by default</h3><p>Make the safest option the easiest one: photos without location, <a class="term" href="#g-mensajes-temporales">disappearing messages</a> and an <a class="term" href="#g-clave-emergencia">emergency key</a> within everyone's reach.</p></article>
       <article class="card"><span class="num">02</span><h3>No central servers</h3><p>Keep an architecture where your identity and your key live on your device.</p></article>
       <article class="card"><span class="num">03</span><h3>Reach more people</h3><p>Grow a community of users who want to live safe and decentralized.</p></article>
       <article class="card"><span class="num">04</span><h3>Business edition</h3><p>Bring this same discretion to teams and organizations, with their own administration and support.</p></article>
@@ -426,7 +465,7 @@
       <div id="g-apk"><dt>APK</dt><dd>Installation file of an Android app. KASYA is distributed as an APK from this page, instead of the Play Store.</dd></div>
       <div id="g-canal"><dt>Channel</dt><dd>A KASYA space where only the administrator publishes and followers read.</dd></div>
       <div id="g-cifrado-e2e"><dt>End-to-end encryption</dt><dd>Only the sender and the receiver have the keys. Nobody in between, neither the network nor a server, can read the content.</dd></div>
-      <div id="g-clave-emergencia"><dt>Emergency key</dt><dd>A second PIN. If typed on the lock screen, KASYA erases everything stored in the app and reopens as new.</dd></div>
+      <div id="g-clave-emergencia"><dt>Emergency key</dt><dd>A second PIN. If typed on the lock screen, KASYA silently erases what is stored in the app (conversations, contacts, files and settings), keeps the account and reopens empty.</dd></div>
       <div id="g-dht"><dt>DHT (distributed hash table)</dt><dd>A directory spread across all the nodes of a network. Each piece of data has a key and is stored by the nodes closest to it; none of them has the complete directory.</dd></div>
       <div id="g-exif"><dt>EXIF</dt><dd>Information the camera stores inside the photo: date, device model and, if enabled, the GPS location. KASYA removes it from JPEG photos before sending them.</dd></div>
       <div id="g-gplv3"><dt>GPLv3</dt><dd>Free software license. It allows you to use, study, modify and share the program, and requires keeping those freedoms in derived versions.</dd></div>
@@ -454,7 +493,7 @@
 
   <section class="wrap section final">
     <h2>Your messages are yours.</h2>
-    <p class="lead">Encrypted. And nobody else sees them.</p>
+    <p class="lead">Encrypted in transit. No servers keeping them.</p>
     <a class="btn" href="#descargar">Download KASYA</a>
   </section>
 
@@ -462,7 +501,7 @@
 
 <footer class="footer">
   <p><strong>KASYA</strong> · Live safe. Live decentralized.</p>
-  <p class="fine"><a href="terms.html">Terms and conditions</a> · Based on free software (Jami, <a class="term" href="#g-gplv3">GPLv3</a>). © <span id="year"></span> KASYA.</p>
+  <p class="fine"><a href="terms.html">Terms and conditions</a> · Based on free software (<a class="term" href="#g-jami">Jami</a>, <a class="term" href="#g-gplv3">GPLv3</a>). © <span id="year"></span> KASYA.</p>
 </footer>
 
 <script src="../config.js?v=20261102m"></script>

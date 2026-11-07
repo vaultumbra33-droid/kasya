@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Manual de usuario — KASYA</title>
 <meta name="description" content="Manual de usuario de KASYA: cómo crear tu cuenta, agregar contactos, chatear, llamar, usar canales y tiendas, y proteger tu privacidad.">
+<link rel="canonical" href="https://vaultumbra33-droid.github.io/kasya/manual.html">
+<link rel="alternate" hreflang="es" href="https://vaultumbra33-droid.github.io/kasya/manual.html">
+<link rel="alternate" hreflang="en" href="https://vaultumbra33-droid.github.io/kasya/en/manual.html">
+<link rel="alternate" hreflang="x-default" href="https://vaultumbra33-droid.github.io/kasya/manual.html">
+<meta property="og:url" content="https://vaultumbra33-droid.github.io/kasya/manual.html">
+<meta property="og:site_name" content="KASYA">
+<meta property="og:locale" content="es_MX">
+<meta property="og:image" content="https://vaultumbra33-droid.github.io/kasya/assets/icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Manual de usuario — KASYA">
+<meta property="og:description" content="Manual de usuario de KASYA: cómo crear tu cuenta, agregar contactos, chatear, llamar, usar canales y tiendas, y proteger tu privacidad.">
+<meta property="og:type" content="article">
 <meta name="theme-color" content="#0b1020">
 <link rel="icon" href="assets/icon.png">
 <link rel="stylesheet" href="assets/style.css?v=20261102m">
@@ -148,13 +161,24 @@
 <h3>PIN de emergencia</h3>
 <p>Define un segundo PIN en Ajustes, distinto al tuyo. Si alguien te obliga a abrir KASYA y escribes ese PIN en la pantalla de bloqueo:</p>
 <ul>
-<li>KASYA borra <strong>todo</strong> sin preguntar: cuentas, mensajes, fotos, documentos y ajustes.</li>
-<li>La app se reinicia y abre vacía, como si fuera nueva.</li>
+<li>KASYA borra <strong>en silencio</strong> y sin preguntar conversaciones, contactos, fotos, documentos y ajustes. Conserva tu cuenta en el teléfono.</li>
+<li>La app se reinicia y abre vacía y desbloqueada, como si fuera nueva.</li>
 <li>No se puede deshacer.</li>
 </ul>
 <div class="note warn">Los archivos que exportaste fuera de la app no se borran.</div>
+<h3>Más protección (opcional)</h3>
+<p>Todo esto se configura en <strong>Ajustes &gt; Bloqueo con PIN</strong>, escribiendo tu PIN:</p>
+<ul>
+<li><strong>Borrar tras PIN incorrectos:</strong> de 5 a 20 intentos fallidos hacen la misma limpieza silenciosa. La pantalla solo dice «PIN incorrecto».</li>
+<li><strong>Mano muerta:</strong> si pasan 1, 2, 3, 7 o 14 días sin que abras la app, se hace la limpieza. Abrir la app con tu PIN reinicia la cuenta regresiva.</li>
+<li><strong>Alerta a contactos:</strong> eliges conversaciones privadas de confianza y escribes un mensaje. Se envía justo antes de limpiar, con tu última ubicación conocida si lo permites. Si no hay red, no sale.</li>
+<li><strong>Respaldo cifrado:</strong> copia diaria de tu cuenta (no de tus mensajes) en la carpeta que elijas, cifrada con una frase de 16 o más caracteres. <strong>Si la olvidas, nadie puede recuperar la copia.</strong> Tras usar la clave de emergencia, esa cuenta ya no puede respaldarse: respalda antes.</li>
+<li><strong>Almacenamiento protegido:</strong> cifra con una frase lo que KASYA guarda por sí misma (hoy, tu estado). Tus conversaciones todavía no están cubiertas.</li>
+</ul>
+<h3>Sígueme</h3>
+<p>En la pantalla principal, menú ⋮ &gt; <strong>Sígueme</strong>: tus contactos de confianza (los mismos de la alerta) reciben tu ubicación en vivo durante 1, 2 u 8 horas. <strong>Detener</strong> lo corta. Mientras se comparte, Android muestra una notificación.</p>
 <h3>Cifrado de punta a punta</h3>
-<p>Tus mensajes y llamadas van cifrados: solo tú y tu contacto tienen las llaves. No hay un servidor central que guarde tus conversaciones.</p>
+<p>Tus mensajes y llamadas van cifrados: solo tú y tu contacto tienen las llaves. No hay un servidor central que guarde tus conversaciones. Esto protege lo que viaja entre teléfonos: lo que queda guardado en tu teléfono depende de la protección de tu propio teléfono.</p>
 
 <h2 id="m9">9. Almacenamiento y respaldo</h2>
 <h3>Almacenamiento</h3>
@@ -177,7 +201,7 @@
 <details><summary>¿Es KASYA gratuita y segura?</summary>
 <p>KASYA se basa en Jami, un proyecto de software libre. Puedes comprobar el APK: compara su huella SHA-256 con la de la página de descarga y analízalo en VirusTotal.</p></details>
 
-<p class="fine" style="margin-top:32px">KASYA · Tus mensajes son tuyos. Cifrados. Y nadie más los ve.</p>
+<p class="fine" style="margin-top:32px">KASYA · Tus mensajes son tuyos. Cifrados en el camino. Ningún servidor los guarda.</p>
 <p><button class="btn btn-ghost" type="button" onclick="window.print()">Imprimir o guardar en PDF</button></p>
 </main>
 <footer class="footer">
