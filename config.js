@@ -1,19 +1,19 @@
 // Único archivo que hay que editar al publicar una nueva versión.
 window.KASYA = {
-  version: "1.2.0",
+  version: "1.2.1",
   // Enlace directo al APK. Con GitHub Releases:
-  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.0/kasya-1.2.0.apk
-  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.0/kasya-1.2.0.apk",
+  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.1/kasya-1.2.1.apk
+  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.1/kasya-1.2.1.apk",
   size: "45 MB",
-  sha256: "05ce1cf59fcc7e4ed69b1c73ca7cfaa70070c6398160e792cc5016d734a548e8",
+  sha256: "0acd5d21e0c4ee1f70876882f825ae7e813edb197b2ec62af269a19212fd272e",
   changelog: [
+    { version: "1.2.1", date: "2026-11-14",
+      es: ["Arreglo del PIN: crear otra cuenta ya no cambia el PIN de la app; se mantiene el que ya tenías.", "Barra inferior corregida en teléfonos plegables y pantallas anchas: las etiquetas ya no salen letra por letra."],
+      en: ["PIN fix: creating another account no longer changes the app PIN; the one you already had stays.", "Bottom bar fixed on foldable phones and wide screens: labels no longer show one letter per line."] },
     { version: "1.2.0", date: "2026-11-04",
       es: ["Seguridad personal, todo opcional: la clave de emergencia ahora limpia en silencio y conserva tu cuenta; borrado tras PIN incorrectos y «mano muerta»; alerta a tus contactos de confianza con tu última ubicación.", "Sígueme: tu ubicación en vivo para tus contactos de confianza durante 1, 2 u 8 horas.", "Respaldo cifrado de tu cuenta en la carpeta que elijas, con una frase larga tuya.", "Almacenamiento protegido para tu estado, con dos modos de borrado de emergencia.", "Notificaciones sin contenido ni respuesta rápida.", "Textos más claros: KASYA cifra lo que viaja; lo guardado en tu teléfono lo protege el propio teléfono."],
       en: ["Personal security, all optional: the emergency key now cleans silently and keeps your account; erase after wrong PINs and a dead-man switch; alert to your trusted contacts with your last known location.", "Follow me: your live location for your trusted contacts for 1, 2 or 8 hours.", "Encrypted backup of your account in the folder you choose, with a long passphrase of your own.", "Protected storage for your status, with two emergency erase modes.", "Notifications with no content and no quick reply.", "Clearer wording: KASYA encrypts what travels; what is stored on your phone is protected by the phone itself."] },
-    { version: "1.2.0", date: "2026-11-04",
-      es: ["Seguridad personal, todo opcional: la clave de emergencia ahora limpia en silencio y conserva tu cuenta; borrado tras PIN incorrectos y «mano muerta»; alerta a tus contactos de confianza con tu última ubicación.", "Sígueme: tu ubicación en vivo para tus contactos de confianza durante 1, 2 u 8 horas.", "Respaldo cifrado de tu cuenta en la carpeta que elijas, con una frase larga tuya.", "Almacenamiento protegido para tu estado, con dos modos de borrado de emergencia.", "Notificaciones sin contenido ni respuesta rápida.", "Textos más claros: KASYA cifra lo que viaja; lo guardado en tu teléfono lo protege el propio teléfono."],
-      en: ["Personal security, all optional: the emergency key now cleans silently and keeps your account; erase after wrong PINs and a dead-man switch; alert to your trusted contacts with your last known location.", "Follow me: your live location for your trusted contacts for 1, 2 or 8 hours.", "Encrypted backup of your account in the folder you choose, with a long passphrase of your own.", "Protected storage for your status, with two emergency erase modes.", "Notifications with no content and no quick reply.", "Clearer wording: KASYA encrypts what travels; what is stored on your phone is protected by the phone itself."] },
-    { version: "1.2.0", date: "2026-11-02",
+    { version: "1.1.2", date: "2026-11-02",
       es: ["Buscar actualizaciones desde Ajustes: compara tu versión con la del sitio y te lleva a la descarga.", "Compartir KASYA: envía el enlace de descarga desde Ajustes.", "Barra inferior sin el hueco sobrante bajo las etiquetas."],
       en: ["Check for updates from Settings: compares your version with the site and takes you to the download.", "Share KASYA: send the download link from Settings.", "Bottom bar without the extra gap under the labels."] },
     { version: "1.1.1", date: "2026-11-02",
