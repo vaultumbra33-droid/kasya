@@ -1,12 +1,15 @@
 // Único archivo que hay que editar al publicar una nueva versión.
 window.KASYA = {
-  version: "1.2.3",
+  version: "1.2.4",
   // Enlace directo al APK. Con GitHub Releases:
-  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.3/kasya-1.2.3.apk
-  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.3/kasya-1.2.3.apk",
+  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.4/kasya-1.2.4.apk
+  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.4/kasya-1.2.4.apk",
   size: "45 MB",
-  sha256: "958610b2998c2af368151c0f573fec89e8e58ed35cfa643aabe66d3e38fabbdb",
+  sha256: "6383cdcacfed9f520e98cb8efcf8c5b22226faf6b48239a4d8e507f8ee83dd08",
   changelog: [
+    { version: "1.2.4", date: "2026-11-15",
+      es: ["Si desvinculas un dispositivo de tu cuenta, ese dispositivo borra todo lo que tenga (cuenta, mensajes, archivos y PIN) y la app vuelve a empezar como nueva. Pasa cuando el dispositivo está en línea con la app abierta."],
+      en: ["If you unlink a device from your account, that device erases everything it holds (account, messages, files and PIN) and the app starts over as new. It happens when the device is online with the app open."] },
     { version: "1.2.3", date: "2026-11-14",
       es: ["Contactos ahora muestra quién está en línea o disponible, con un punto de color.", "Canales y Tiendas se actualizan al tirar hacia abajo.", "Nuevo interruptor en Ajustes, «Fondo estrellado»: en pantallas grandes y plegables abiertos, puedes quitar la imagen del panel derecho."],
       en: ["Contacts now shows who is online or available, with a colored dot.", "Channels and Stores refresh when you pull down.", "New switch in Settings, «Starry background»: on large screens and unfolded phones you can remove the picture from the right panel."] },
