@@ -1,12 +1,15 @@
 // Único archivo que hay que editar al publicar una nueva versión.
 window.KASYA = {
-  version: "1.2.2",
+  version: "1.2.3",
   // Enlace directo al APK. Con GitHub Releases:
-  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.2/kasya-1.2.2.apk
-  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.2/kasya-1.2.2.apk",
+  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.3/kasya-1.2.3.apk
+  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.3/kasya-1.2.3.apk",
   size: "45 MB",
-  sha256: "7022b30716a3f161ff2c79832b035ab4acd2df7917ddb4948a7e5fea8af11b24",
+  sha256: "958610b2998c2af368151c0f573fec89e8e58ed35cfa643aabe66d3e38fabbdb",
   changelog: [
+    { version: "1.2.3", date: "2026-11-14",
+      es: ["Contactos ahora muestra quién está en línea o disponible, con un punto de color.", "Canales y Tiendas se actualizan al tirar hacia abajo.", "Nuevo interruptor en Ajustes, «Fondo estrellado»: en pantallas grandes y plegables abiertos, puedes quitar la imagen del panel derecho."],
+      en: ["Contacts now shows who is online or available, with a colored dot.", "Channels and Stores refresh when you pull down.", "New switch in Settings, «Starry background»: on large screens and unfolded phones you can remove the picture from the right panel."] },
     { version: "1.2.2", date: "2026-11-14",
       es: ["Noticias se actualiza: tira hacia abajo para traer lo más reciente, y se recarga sola si llevas más de 10 minutos sin verla."],
       en: ["News now refreshes: pull down to get the latest, and it reloads on its own if you have not looked at it for more than 10 minutes."] },
