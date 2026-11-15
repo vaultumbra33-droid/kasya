@@ -1,12 +1,15 @@
 // Único archivo que hay que editar al publicar una nueva versión.
 window.KASYA = {
-  version: "1.2.4",
+  version: "1.2.5",
   // Enlace directo al APK. Con GitHub Releases:
-  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.4/kasya-1.2.4.apk
-  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.4/kasya-1.2.4.apk",
+  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.5/kasya-1.2.5.apk
+  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.5/kasya-1.2.5.apk",
   size: "45 MB",
-  sha256: "6383cdcacfed9f520e98cb8efcf8c5b22226faf6b48239a4d8e507f8ee83dd08",
+  sha256: "13631ad880391b314d71ab26998bec3f5b3548d96a2b9dcb6553a7e55728475d",
   changelog: [
+    { version: "1.2.5", date: "2026-11-15",
+      es: ["Nuevo interruptor «Temporal 24 h» dentro de cada chat: con un toque, los mensajes de esa conversación se borran a las 24 horas, para los dos.", "Al crear o importar una cuenta, KASYA te ofrece una frase de protección generada para ti. Guárdala en un lugar seguro; hoy protege tus Estados (las conversaciones aún no).", "El menú de tres puntos del inicio ahora tiene «Compartir KASYA» y «Buscar actualizaciones»."],
+      en: ["New «Temporary 24 h» switch inside every chat: with one tap, the messages of that conversation are deleted after 24 hours, for both people.", "When you create or import an account, KASYA offers you a protection phrase generated for you. Keep it somewhere safe; today it protects your Status (conversations not yet).", "The three-dot menu on the home screen now has «Share KASYA» and «Check for updates»."] },
     { version: "1.2.4", date: "2026-11-15",
       es: ["Si desvinculas un dispositivo de tu cuenta, ese dispositivo borra todo lo que tenga (cuenta, mensajes, archivos y PIN) y la app vuelve a empezar como nueva. Pasa cuando el dispositivo está en línea con la app abierta."],
       en: ["If you unlink a device from your account, that device erases everything it holds (account, messages, files and PIN) and the app starts over as new. It happens when the device is online with the app open."] },

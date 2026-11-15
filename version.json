@@ -1,8 +1,8 @@
 {
-  "version": "1.2.4",
-  "versionCode": 516,
-  "apkUrl": "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.4/kasya-1.2.4.apk",
-  "sha256": "6383cdcacfed9f520e98cb8efcf8c5b22226faf6b48239a4d8e507f8ee83dd08",
-  "notes_es": "- Si desvinculas un dispositivo de tu cuenta, ese dispositivo borra todo lo que tenga (cuenta, mensajes, archivos y PIN) y la app vuelve a empezar como nueva. Pasa cuando el dispositivo está en línea con la app abierta.",
-  "notes_en": "- If you unlink a device from your account, that device erases everything it holds (account, messages, files and PIN) and the app starts over as new. It happens when the device is online with the app open."
+  "version": "1.2.5",
+  "versionCode": 517,
+  "apkUrl": "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.5/kasya-1.2.5.apk",
+  "sha256": "13631ad880391b314d71ab26998bec3f5b3548d96a2b9dcb6553a7e55728475d",
+  "notes_es": "- Nuevo interruptor «Temporal 24 h» dentro de cada chat: los mensajes de esa conversación se borran a las 24 horas, para los dos.\n- Al crear o importar una cuenta, KASYA te ofrece una frase de protección generada para ti. Guárdala en un lugar seguro; hoy protege tus Estados (las conversaciones aún no).\n- El menú de tres puntos del inicio ahora tiene «Compartir KASYA» y «Buscar actualizaciones».",
+  "notes_en": "- New «Temporary 24 h» switch inside every chat: the messages of that conversation are deleted after 24 hours, for both people.\n- When you create or import an account, KASYA offers you a protection phrase generated for you. Keep it somewhere safe; today it protects your Status (conversations not yet).\n- The three-dot menu on the home screen now has «Share KASYA» and «Check for updates»."
 }
