@@ -1,12 +1,15 @@
 // Único archivo que hay que editar al publicar una nueva versión.
 window.KASYA = {
-  version: "1.2.1",
+  version: "1.2.2",
   // Enlace directo al APK. Con GitHub Releases:
-  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.1/kasya-1.2.1.apk
-  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.1/kasya-1.2.1.apk",
+  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.2/kasya-1.2.2.apk
+  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.2/kasya-1.2.2.apk",
   size: "45 MB",
-  sha256: "0acd5d21e0c4ee1f70876882f825ae7e813edb197b2ec62af269a19212fd272e",
+  sha256: "7022b30716a3f161ff2c79832b035ab4acd2df7917ddb4948a7e5fea8af11b24",
   changelog: [
+    { version: "1.2.2", date: "2026-11-14",
+      es: ["Noticias se actualiza: tira hacia abajo para traer lo más reciente, y se recarga sola si llevas más de 10 minutos sin verla."],
+      en: ["News now refreshes: pull down to get the latest, and it reloads on its own if you have not looked at it for more than 10 minutes."] },
     { version: "1.2.1", date: "2026-11-14",
       es: ["Arreglo del PIN: crear otra cuenta ya no cambia el PIN de la app; se mantiene el que ya tenías.", "Barra inferior corregida en teléfonos plegables y pantallas anchas: las etiquetas ya no salen letra por letra."],
       en: ["PIN fix: creating another account no longer changes the app PIN; the one you already had stays.", "Bottom bar fixed on foldable phones and wide screens: labels no longer show one letter per line."] },

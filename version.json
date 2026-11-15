@@ -1,8 +1,8 @@
 {
-  "version": "1.2.1",
-  "versionCode": 513,
-  "apkUrl": "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.1/kasya-1.2.1.apk",
-  "sha256": "0acd5d21e0c4ee1f70876882f825ae7e813edb197b2ec62af269a19212fd272e",
-  "notes_es": "- Arreglo del PIN: crear otra cuenta ya no cambia el PIN de la app; se mantiene el que ya tenías.\n- Barra inferior corregida en teléfonos plegables y pantallas anchas: las etiquetas ya no salen letra por letra.",
-  "notes_en": "- PIN fix: creating another account no longer changes the app PIN; the one you already had stays.\n- Bottom bar fixed on foldable phones and wide screens: labels no longer show one letter per line."
+  "version": "1.2.2",
+  "versionCode": 514,
+  "apkUrl": "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.2/kasya-1.2.2.apk",
+  "sha256": "7022b30716a3f161ff2c79832b035ab4acd2df7917ddb4948a7e5fea8af11b24",
+  "notes_es": "- Noticias se actualiza: tira hacia abajo para traer lo más reciente, y se recarga sola si llevas más de 10 minutos sin verla.",
+  "notes_en": "- News now refreshes: pull down to get the latest, and it reloads on its own if you have not looked at it for more than 10 minutes."
 }
