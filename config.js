@@ -1,12 +1,15 @@
 // Único archivo que hay que editar al publicar una nueva versión.
 window.KASYA = {
-  version: "1.2.5",
+  version: "1.2.6",
   // Enlace directo al APK. Con GitHub Releases:
-  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.5/kasya-1.2.5.apk
-  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.5/kasya-1.2.5.apk",
+  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.6/kasya-1.2.6.apk
+  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.6/kasya-1.2.6.apk",
   size: "45 MB",
-  sha256: "13631ad880391b314d71ab26998bec3f5b3548d96a2b9dcb6553a7e55728475d",
+  sha256: "ff1d606c43a14f36c45c952e984d7f4eef282af35e5a5271bd70581c9e69ab8e",
   changelog: [
+    { version: "1.2.6", date: "2026-11-15",
+      es: ["En Ajustes de la cuenta, un dispositivo vinculado sin nombre (restos de una instalación anterior) ahora se muestra como «Dispositivo desconocido» y se puede quitar con la ✕."],
+      en: ["In Account settings, a linked device with no name (left over from an earlier installation) now shows as «Unknown device» and can be removed with the ✕."] },
     { version: "1.2.5", date: "2026-11-15",
       es: ["Nuevo interruptor «Temporal 24 h» dentro de cada chat: con un toque, los mensajes de esa conversación se borran a las 24 horas, para los dos.", "Al crear o importar una cuenta, KASYA te ofrece una frase de protección generada para ti. Guárdala en un lugar seguro; hoy protege tus Estados (las conversaciones aún no).", "El menú de tres puntos del inicio ahora tiene «Compartir KASYA» y «Buscar actualizaciones»."],
       en: ["New «Temporary 24 h» switch inside every chat: with one tap, the messages of that conversation are deleted after 24 hours, for both people.", "When you create or import an account, KASYA offers you a protection phrase generated for you. Keep it somewhere safe; today it protects your Status (conversations not yet).", "The three-dot menu on the home screen now has «Share KASYA» and «Check for updates»."] },
