@@ -1,12 +1,15 @@
 // Único archivo que hay que editar al publicar una nueva versión.
 window.KASYA = {
-  version: "1.2.6",
+  version: "1.2.7",
   // Enlace directo al APK. Con GitHub Releases:
-  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.6/kasya-1.2.6.apk
-  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.6/kasya-1.2.6.apk",
+  // https://github.com/<usuario>/<repositorio>/releases/download/v1.2.7/kasya-1.2.7.apk
+  apkUrl: "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.7/kasya-1.2.7.apk",
   size: "45 MB",
-  sha256: "ff1d606c43a14f36c45c952e984d7f4eef282af35e5a5271bd70581c9e69ab8e",
+  sha256: "abf8f28bd5fe41518924d66881b3906a945ac43841a1dec1293cf33610d07294",
   changelog: [
+    { version: "1.2.7", date: "2026-11-17",
+      es: ["Nueva pestaña «Escribir ID» en la pantalla del QR: agrega un contacto escribiendo o pegando su ID de KASYA o su nombre de usuario.", "Al compartir tu ID, el mensaje ya trae el enlace correcto de descarga de KASYA."],
+      en: ["New «Enter ID» tab on the QR screen: add a contact by typing or pasting their KASYA ID or username.", "When you share your ID, the message now includes the correct KASYA download link."] },
     { version: "1.2.6", date: "2026-11-15",
       es: ["En Ajustes de la cuenta, un dispositivo vinculado sin nombre (restos de una instalación anterior) ahora se muestra como «Dispositivo desconocido» y se puede quitar con la ✕."],
       en: ["In Account settings, a linked device with no name (left over from an earlier installation) now shows as «Unknown device» and can be removed with the ✕."] },

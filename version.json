@@ -1,8 +1,8 @@
 {
-  "version": "1.2.6",
-  "versionCode": 518,
-  "apkUrl": "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.6/kasya-1.2.6.apk",
-  "sha256": "ff1d606c43a14f36c45c952e984d7f4eef282af35e5a5271bd70581c9e69ab8e",
-  "notes_es": "- En Ajustes de la cuenta, un dispositivo vinculado sin nombre (restos de una instalación anterior) ahora se muestra como «Dispositivo desconocido» y se puede quitar con la ✕.",
-  "notes_en": "- In Account settings, a linked device with no name (left over from an earlier installation) now shows as «Unknown device» and can be removed with the ✕."
+  "version": "1.2.7",
+  "versionCode": 519,
+  "apkUrl": "https://github.com/vaultumbra33-droid/kasya/releases/download/v1.2.7/kasya-1.2.7.apk",
+  "sha256": "abf8f28bd5fe41518924d66881b3906a945ac43841a1dec1293cf33610d07294",
+  "notes_es": "- Nueva pestaña «Escribir ID» en la pantalla del QR para agregar contactos con texto.\n- Al compartir tu ID, el mensaje trae el enlace correcto de descarga.",
+  "notes_en": "- New «Enter ID» tab on the QR screen to add contacts by text.\n- Sharing your ID now includes the correct download link."
 }
